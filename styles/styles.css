@@ -1,0 +1,261 @@
+* {
+  Margin:0;
+  padding:0;
+}
+html, body, p, span{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 25px;
+}
+#header {
+  background: linear-gradient(to right,rgb(129, 220, 215),white);
+/*   background-color: rgb(129, 220, 215); */
+}
+@media(max-width: 768px){
+  footer, #header{
+    display: none;
+  }
+}
+.header__principal{
+  display: flex;
+  font-size: small;
+  background-color: rgba(0, 255, 255, 0.399);
+  padding: 0px 25px;
+  justify-content: space-between;
+  align-items: center;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 700,
+  'GRAD' 0,
+  'opsz' 48 
+}
+.header__secundario{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#logo__jacinto{
+  height: 100px;
+  width: auto;
+  padding-left: 50px;
+}
+#label_buscar{
+  padding-top: 35px;
+  margin-left: 170px;
+}
+#buscar_boton {
+  border-radius: 2px;
+  padding-top: 35px;
+}
+.header__secundario__idioma{
+  display: flex;
+  text-align: center;
+  padding: 10px;
+}
+#espanol, #ingles{
+  padding: 5px;
+}
+.header__secundario__idioma p{
+  text-align: center;
+  font-size: 7px;
+}
+.header__menu nav ul{
+  display: flex;
+  list-style: none;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 30px;
+}
+header nav ul li a{
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px;
+}
+.main{
+  background-image: url("../img/fondo.png");
+  height: 200px;
+  width: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main h1, .main h2{
+  text-align: center;
+  padding: 15px;
+}
+.main__contacto{
+  padding: 30px;
+  height: 200px;
+  width: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main__contacto h1, .main__contacto h2{
+  text-align: center;
+  padding: 5px;
+}
+.videos{
+  text-align: center;
+  padding: 20px;
+}
+.destacados div{
+  background-color: aqua;
+  padding: 20px;
+}
+.destacados div h2{
+  text-align: center;
+
+}
+.destacados__contenedor{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+  margin: 25px;
+  justify-content: space-evenly;
+  list-style: none;
+}
+.destacados__contenedor li{
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 15px;
+  align-items: center;
+}
+.destacados__contenedor__nombre{
+  text-align: justify;
+}
+.destacados__contenedor__imagen{
+  height: 350px;  
+}
+.destacados__contenedor__precio ul{
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+  list-style: none;
+}
+.destacados__contenedor__precio ul li a{
+  color: white;
+  background-color: lightgreen;
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px;
+}
+#mapa, #mapa ul li{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.mpagos{
+  background-color: white;
+}
+.mpagos li{
+  list-style: none;
+  text-align: center;
+}
+.reparacion{
+  padding: 40px;
+}
+.reparacion div{
+text-align: center;
+}
+.reparacion p{
+  padding: 30px;
+  margin: 15px;
+  font-size: 35px;
+}
+.reparacio__carrito{
+  background-color: aqua;
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 10px;
+  margin: 20px;
+}
+.contenedor_principal{
+  padding: 45px;
+}
+.contenedor_principal div{
+display: flex;
+justify-content: center;
+}
+.contenedor_principal div img{
+  width: 200px;
+  height: auto;
+}
+.contenedor_principal p, .contenedor_principal h2, .contenedor_principal h4{
+  padding: 12px;
+}
+.main__contacto__form form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+}
+.beneficios{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: larger;
+  text-align: center;
+}
+.beneficios__lista{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.beneficios__lista li{
+  list-style: none;
+}
+#beneficios__lista__izq{
+  border-right: 2px solid black;
+}
+#beneficios__lista__centro{
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+#beneficios__lista__der{
+  border-left: 2px solid black;
+}
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.footer div h3{
+  text-align: center;
+}
+.izquierdo {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color:rgb(0, 255, 221);
+}
+.centro {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color:rgb(87, 250, 127);
+}
+.derecho {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color:rgb(0, 255, 221);
+}
+.icono-redes, .bandera {
+  width: 12px;
+  height: 12px;
+}
+.pie {
+  list-style-type: none;
+}
+.pie li{
+  text-align: center;
+}
+.pie li a{
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
+}
+.designer {
+  text-align: center;
+  padding: 5px;
+}
