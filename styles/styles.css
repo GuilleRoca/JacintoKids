@@ -120,14 +120,20 @@ header nav ul li a{
   list-style: none;
 }
 .destacados__contenedor li{
-  background-color: aqua;
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  margin: 15px;
   align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
-.destacados__contenedor__nombre{
+.card:hover{
+  transform: scale(1.2,1.2);
+  z-index: 1000;
+}
+.card img{
+  transform: scale(0.8,0.8);
+}
+/* .destacados__contenedor__nombre{
   text-align: justify;
 }
 .destacados__contenedor__imagen{
@@ -146,7 +152,7 @@ header nav ul li a{
   text-decoration: none;
   padding: 10px;
   margin: 10px;
-}
+} */
 #mapa ul, #mapa ul li{
   text-align: center;
   margin-top: 50px;
