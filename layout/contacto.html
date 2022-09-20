@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - Tienda virtual</title>
+    <title>Contacto - Tienda JacintoKids</title>
     <link rel="stylesheet" href="../styles/styles.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,0" /><!-- link de google fonts para iconos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,6 @@
 <body>
     <header id="header">
         <div class="header__principal">
-
             <div class="header__principal__cuenta">
                 <a href="">Iniciar sesión</a>
                 <a href="">Crear cuenta</a>
@@ -23,42 +22,46 @@
             <div>
                 <a href="./carrito.html"><span class="material-symbols-outlined">shopping_cart</span></a>
             </div>
-            
-        </div>
-        <div class="header__secundario">
-            <div class="header__secundario_logo">
-                <a href="../index.html"><img src="../img/logojacinto.png" alt="logotipo de la página" id="logo__jacinto"></a>
-            </div>
-            <div class="header__secundario__buscar">
-                <input type="text" id="buscar" placeholder="Accesorios...">
-                <input type="button" id="boton" value="Buscar">
-            </div>   
-            <div class="header__secundario__idioma">
-                <div id="espanol">
-                    <a href="../index.html"><img src="../img/espana.png" alt="bandera espana" class="bandera"></a>    
-                    <p>ESP</p>
-                </div >
-                <div id="ingles">
-                    <a href="./index_en.html"><img src="../img/ingles.png" alt="bandera ingles" class="bandera"></a>
-                    <p>ENG</p>
-                </div>
-            </div>
         </div>
         <div class="header__menu">
-            <nav>
-                <ul class="header__menu__intro">
-                    <li><a href="../index.html">INICIO</a></li>
-                    <li><a href="./productos.html">PRODUCTOS</a></li>
-                    <li><a href="./mpagos.html">MEDIOS DE PAGO</a></li>
-                    <li><a href="./ubicacion.html">UBICACIÓN</a></li>
-                    <li><a href="./contacto.html">CONTACTO</a></li>
-                </ul>
-            </nav>
+            <nav class="navbar navbar-expand-lg" style="background-color: rgb(129, 220, 215)">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="../index.html"><img src="../img/logojacinto.png" alt="logotipo de la página" id="logo__jacinto"></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                          <a class="nav-link" href="../index.html">INICIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./productos.html">PRODUCTOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./mpagos.html">PAGOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./ubicacion.html">UBICACIÓN</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-primary text-bg-info active" aria-current="page" href="./contacto.html">CONTACTO</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="btn btn-outline-info text-primary" type="submit">Buscar</button>
+                    </form>
+                  </div>
+                </div>
+              </nav>
         </div>
     </header>
 
     <main class="main__contacto">
-        <h1>CONTACTO</h1>
+        <div>
+            <h2>CONTACTO</h2>
+        </div>
         <h2>Su opinión nos interesa</h2>
         <h2>Déjenos su consulta y un contacto para enviarle una respuesta</h2>
     </main>

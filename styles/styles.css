@@ -2,32 +2,35 @@
   Margin:0;
   padding:0;
 }
-html, body, p, span{
-  font-family: 'Josefin Sans' , sans-serif !important;
-  font-size: 25px !important;
-}
+body, p, span{
+  font-family: 'Josefin Sans' , sans-serif ;
+  font-size: 20px !important;
+} 
 #header {
   background-color: rgb(129, 220, 215);
 }
 @media(max-width: 768px){
-  footer, #header{
+  footer{
     display: none;
   }
 }
 .header__principal{
   display: flex;
   font-size: small;
-  background-color: rgba(0, 255, 255, 0.399);
+  background-color: rgb(0, 255, 255);
   padding: 0px 25px;
   justify-content: space-between;
   align-items: center;
+}
+.header__principal__cuenta{
+  font-family: 'Josefin Sans' , sans-serif !important;
 }
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 1,
   'wght' 700,
   'GRAD' 0,
-  'opsz' 48 !important
+  'opsz' 48
 }
 .header__secundario{
   display: flex;
@@ -35,7 +38,7 @@ html, body, p, span{
   align-items: center;
 }
 #logo__jacinto{
-  height: 100px;
+  height: 150px;
   width: auto;
   padding-left: 50px;
 }
@@ -58,6 +61,9 @@ html, body, p, span{
 .header__secundario__idioma p{
   text-align: center;
   font-size: 7px;
+}
+.header__menu{
+  font-size: 15px;
 }
 .header__menu nav ul{
   display: flex;
@@ -84,14 +90,10 @@ header nav ul li a{
   text-align: center;
   padding: 15px;
 }
-.main__contacto{
-  padding: 50px;
+.main__contacto h2{
+  text-align: center;
   height: auto;
   width: auto;
-}
-.main__contacto h1, .main__contacto h2{
-  text-align: center;
-  padding: 5px;
 }
 .main__contacto__form{
   display: grid;
@@ -101,11 +103,11 @@ header nav ul li a{
   text-align: center;
   padding: 20px;
 }
-.destacados div{
+.destacados div, #mapa div, .main__contacto div{
   background-color: aqua;
   padding: 20px;
 }
-.destacados div h2{
+.destacados div h2, #mapa div h2, .main__contacto div h2{
   text-align: center;
 
 }
@@ -145,10 +147,12 @@ header nav ul li a{
   padding: 10px;
   margin: 10px;
 }
-#mapa, #mapa ul li{
+#mapa ul, #mapa ul li{
   text-align: center;
   margin-top: 50px;
   margin-bottom: 100px;
+  text-decoration: none;
+  list-style: none;
 }
 .mpagos{
   background-color: white;
@@ -166,7 +170,8 @@ text-align: center;
 .reparacion p{
   padding: 30px;
   margin: 15px;
-  font-size: 35px;
+  font-size: 35px !important;
+  text-align: center !important;
 }
 .reparacio__carrito{
   background-color: aqua;
