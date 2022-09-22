@@ -216,20 +216,20 @@ text-align: center;
   padding: 10px;
   margin: 20px;
 }
-/* .contenedor_principal{
-  padding: 45px;
-}
 .contenedor_principal div{
+  padding: 45px !important;
+}
+.imgcontenedor{
 display: flex;
 justify-content: center;
 }
-.contenedor_principal div img{
+.imgcontenedor img{
   width: 200px;
   height: auto;
 }
-.contenedor_principal p, .contenedor_principal h2, .contenedor_principal h4{
+.contenedor_principal div p, .contenedor_principal div h2, .contenedor_principal div h4{
   padding: 12px;
-} */
+}
 .beneficios{
   padding-top: 10px;
   padding-bottom: 10px;
