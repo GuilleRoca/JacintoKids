@@ -216,9 +216,6 @@ text-align: center;
   padding: 10px;
   margin: 20px;
 }
-.contenedor_principal div{
-  padding: 45px !important;
-}
 .imgcontenedor{
 display: flex;
 justify-content: center;
@@ -229,6 +226,7 @@ justify-content: center;
 }
 .contenedor_principal div p, .contenedor_principal div h2, .contenedor_principal div h4{
   padding: 12px;
+  margin-left: 2rem;
 }
 .beneficios{
   padding-top: 10px;
