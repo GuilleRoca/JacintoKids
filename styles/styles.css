@@ -251,17 +251,16 @@ justify-content: center;
 #beneficios__lista__der{
   border-left: 2px solid black;
 }
-.beneficios__mobile__lista{
+.beneficios__mobile{
   display: none;
 }
 @media (max-width: 992px){
-  .beneficios__mobile__lista{
+  .beneficios__mobile{
     display: block;
   }
   .beneficios__lista{
     display: none;
   }
-
 }
 .footer {
   display: grid;
