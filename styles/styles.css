@@ -299,6 +299,28 @@ justify-content: center;
   text-decoration: none !important;
   color: black !important;
 }
+.contactoWa{
+  text-align: right;
+  display: block;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+}
+.contactoWa div img{
+  width: 3rem;
+  height: auto;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+}
+.contactoWa img:hover{
+  transform: scale(1.5,1.5);
+}
+@media (max-width: 992px){
+  .contactoWa{
+    display: none;
+  }
+}
 .designer {
   text-align: center;
   padding: 5px;
