@@ -325,3 +325,43 @@ justify-content: center;
   text-align: center;
   padding: 5px;
 }
+.footer_mobile{
+  background-color: rgb(129, 220, 215);
+  height: 3rem;
+  display: none;
+}
+.footer_mobile_flex{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0px;
+}
+.footer_mobile_flex li{
+  list-style: none;
+  text-align: center;
+  padding-top: 0.5rem;
+}
+.redes_mobile{
+  display: none;
+}
+.redes_mobile div ul{
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  padding: 5rem;
+}
+.redes_mobile div ul li{
+  list-style: none;
+  text-align: center;
+  padding-top: 0.5rem;
+}
+@media (max-width: 992px){
+  .footer_mobile{
+    display: block;
+    position: fixed;
+    bottom: 0px;
+    z-index: 1000;
+    width: 100%;
+  }
+  .redes_mobile{
+    display: block;
+  }
+}
