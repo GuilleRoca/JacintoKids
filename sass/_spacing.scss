@@ -1,0 +1,14 @@
+@for $i from 1 through 10 {
+    .marbot-#{$i}r {
+        margin-bottom: $i+rem;
+    }
+    .martop-#{$i}r {
+        margin-top: $i+rem;
+    }
+        .marleft-#{$i}r {
+        margin-left: $i+rem;
+    }
+        .marright-#{$i}r {
+        margin-right: $i+rem;
+    }
+}

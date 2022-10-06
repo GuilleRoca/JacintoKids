@@ -1,0 +1,11 @@
+$colores:(
+    rojo:red,
+    azul:blue,
+    amarillo:yellow,
+    jacinto: rgb(129, 220, 215)
+);
+@each $nombre,$color in $colores {
+    .backcol-#{$nombre} {
+        background-color: $color;
+    }
+}
