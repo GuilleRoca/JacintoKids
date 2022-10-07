@@ -1,0 +1,140 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.header__principal{
+    display: flex;
+    padding: 0px 25px;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__menu nav ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+}
+header nav ul li a{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+}
+.main{
+    background-image: url("../img/fondo.png");
+    height: 200px;
+    width: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main h1, .main h2{
+    text-align: center;
+    padding: 15px;
+}
+.main__contacto h2{
+    text-align: center;
+    height: auto;
+    width: auto;
+}
+.main__contacto__form{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 20px;
+}
+.videos{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 20px;
+}
+.videos div{
+    text-align: center;
+}
+.destacados div h2, #mapa div h2, .main__contacto div h2{
+    text-align: center;
+  
+}
+.mpagos li{
+    list-style: none;
+    text-align: center;
+}
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.footer div h3{
+    text-align: center !important;
+}
+.izquierdo {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+.centro {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+.derecho {
+    padding-top: 10px!important;
+    padding-bottom: 10px!important;
+}
+.pie {
+    list-style-type: none !important;
+}
+.pie li{
+    text-align: center !important;
+}
+.pie li a{
+    list-style-type: none !important;
+    text-decoration: none !important;
+    color: black !important;
+}
+.contactoWa{
+    text-align: right;
+    display: block;
+}
+.designer {
+    text-align: center;
+    padding: 5px;
+}
+.footer_mobile{
+    height: 3rem;
+}
+.footer_mobile_flex{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0px;
+}
+.footer_mobile_flex li{
+    list-style: none;
+    text-align: center;
+    padding-top: 0.5rem;
+}
+.redes_mobile div ul{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    padding: 5rem;
+}
+.redes_mobile div ul li{
+    list-style: none;
+    text-align: center;
+    padding-top: 0.5rem;
+}
+.header_mobile{
+    height: 3rem;
+}
+.header_mobile_flex{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0px;
+}
+.header_mobile_flex li{
+    list-style: none;
+    text-align: center;
+    padding-top: 0.5rem;
+}
+@for $i from 1 through 10 {
+    .alto-#{$i}r {
+        height: $i+rem;
+    }
+}

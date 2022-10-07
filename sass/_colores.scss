@@ -2,7 +2,9 @@ $colores:(
     rojo:red,
     azul:blue,
     amarillo:yellow,
-    jacinto: rgb(129, 220, 215)
+    blanco: white,
+    jacinto-h: rgb(0, 255, 255),
+    jacinto-f:rgb(129, 220, 215)
 );
 @each $nombre,$color in $colores {
     .backcol-#{$nombre} {

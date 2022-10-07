@@ -5,10 +5,30 @@
     .martop-#{$i}r {
         margin-top: $i+rem;
     }
-        .marleft-#{$i}r {
+    .marleft-#{$i}r {
         margin-left: $i+rem;
     }
-        .marright-#{$i}r {
+    .marright-#{$i}r {
         margin-right: $i+rem;
+    }
+    .martot-#{$i}r {
+        margin: $i+rem;
+    }
+}
+@for $i from 1 through 10 {
+    .padbot-#{$i}r {
+        padding-bottom: $i+rem;
+    }
+    .padtop-#{$i}r {
+        padding-top: $i+rem;
+    }
+    .padleft-#{$i}r {
+        padding-left: $i+rem;
+    }
+    .padright-#{$i}r {
+        padding-right: $i+rem;
+    }
+    .padtot-#{$i}r {
+        padding: $i+rem;
     }
 }

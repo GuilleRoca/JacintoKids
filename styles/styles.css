@@ -10,9 +10,9 @@ ul, li{
   margin: 0px;
   padding: 0px;
 }
-#header {
-  background-color: rgb(129, 220, 215);
-}
+/* #header {
+  background-color: rgb(129, 5, 215);
+} */
 .videos__sm{
   display: none;
 }
@@ -35,7 +35,7 @@ ul, li{
 }
 .header__principal{
   display: flex;
-  font-size: small;
+  font-size:small;
   background-color: rgb(0, 255, 255);
   padding: 0px 25px;
   justify-content: space-between;
@@ -70,18 +70,7 @@ ul, li{
   border-radius: 2px;
   padding-top: 35px;
 }
-.header__secundario__idioma{
-  display: flex;
-  text-align: center;
-  padding: 10px;
-}
-#espanol, #ingles{
-  padding: 5px;
-}
-.header__secundario__idioma p{
-  text-align: center;
-  font-size: 7px;
-}
+
 .header__menu{
   font-size: 15px;
 }
@@ -129,7 +118,7 @@ header nav ul li a{
   text-align: center;
 }
 .destacados div, #mapa div, .main__contacto div{
-  background-color: aqua;
+  background-color: rgb(0, 255, 255);
   padding: 20px;
 }
 .destacados div h2, #mapa div h2, .main__contacto div h2{
@@ -163,26 +152,6 @@ header nav ul li a{
   transform: scale(1.2,1.2);
   z-index: 1000;
 }
-/* .destacados__contenedor__nombre{
-  text-align: justify;
-}
-.destacados__contenedor__imagen{
-  height: 350px;  
-}
-.destacados__contenedor__precio ul{
-  display: flex;
-  padding: 15px;
-  justify-content: space-between;
-  list-style: none;
-}
-.destacados__contenedor__precio ul li a{
-  color: white;
-  background-color: lightgreen;
-  border-radius: 10px;
-  text-decoration: none;
-  padding: 10px;
-  margin: 10px;
-} */
 #mapa ul, #mapa ul li{
   text-align: center;
   margin-top: 50px;
@@ -208,13 +177,6 @@ text-align: center;
   margin: 15px;
   font-size: 35px !important;
   text-align: center !important;
-}
-.reparacio__carrito{
-  background-color: aqua;
-  border-radius: 10px;
-  text-decoration: none;
-  padding: 10px;
-  margin: 20px;
 }
 .imgcontenedor{
 display: flex;
@@ -290,19 +252,19 @@ justify-content: center;
 .izquierdo {
   padding-top: 10px !important;
   padding-bottom: 10px !important;
-  background-color:rgb(0, 255, 221);
+  background-color: rgb(0, 255, 255);
 }
 .centro {
   padding-top: 10px !important;
   padding-bottom: 10px !important;
-  background-color:rgb(87, 250, 127);
+  background-color:rgb(129, 220, 215);
 }
 .derecho {
   padding-top: 10px!important;
   padding-bottom: 10px!important;
-  background-color:rgb(0, 255, 221);
+  background-color: rgb(0, 255, 255);
 }
-.icono-redes, .bandera {
+.icono-redes {
   width: 12px;
   height: 12px;
 }
@@ -344,7 +306,7 @@ justify-content: center;
   padding: 5px;
 }
 .footer_mobile{
-  background-color: rgb(129, 220, 215);
+  background-color: rgb(0, 255, 255);
   height: 3rem;
   display: none;
 }
@@ -372,7 +334,7 @@ justify-content: center;
   padding-top: 0.5rem;
 }
 .header_mobile{
-  background-color: rgb(129, 220, 215);
+  background-color: rgb(0, 255, 255);
   height: 3rem;
   display: none;
 }

@@ -1,3 +1,285 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.header__principal {
+  display: flex;
+  padding: 0px 25px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__menu nav ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 30px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px;
+}
+
+.main {
+  background-image: url("../img/fondo.png");
+  height: 200px;
+  width: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main h1, .main h2 {
+  text-align: center;
+  padding: 15px;
+}
+
+.main__contacto h2 {
+  text-align: center;
+  height: auto;
+  width: auto;
+}
+
+.main__contacto__form {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  padding: 20px;
+}
+
+.videos {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  padding: 20px;
+}
+
+.videos div {
+  text-align: center;
+}
+
+.destacados div h2, #mapa div h2, .main__contacto div h2 {
+  text-align: center;
+}
+
+.mpagos li {
+  list-style: none;
+  text-align: center;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer div h3 {
+  text-align: center !important;
+}
+
+.izquierdo {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+.centro {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+.derecho {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+.pie {
+  list-style-type: none !important;
+}
+
+.pie li {
+  text-align: center !important;
+}
+
+.pie li a {
+  list-style-type: none !important;
+  text-decoration: none !important;
+  color: black !important;
+}
+
+.contactoWa {
+  text-align: right;
+  display: block;
+}
+
+.designer {
+  text-align: center;
+  padding: 5px;
+}
+
+.footer_mobile {
+  height: 3rem;
+}
+
+.footer_mobile_flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0px;
+}
+
+.footer_mobile_flex li {
+  list-style: none;
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
+.redes_mobile div ul {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  padding: 5rem;
+}
+
+.redes_mobile div ul li {
+  list-style: none;
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
+.header_mobile {
+  height: 3rem;
+}
+
+.header_mobile_flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0px;
+}
+
+.header_mobile_flex li {
+  list-style: none;
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
+.alto-1r {
+  height: 1rem;
+}
+
+.alto-2r {
+  height: 2rem;
+}
+
+.alto-3r {
+  height: 3rem;
+}
+
+.alto-4r {
+  height: 4rem;
+}
+
+.alto-5r {
+  height: 5rem;
+}
+
+.alto-6r {
+  height: 6rem;
+}
+
+.alto-7r {
+  height: 7rem;
+}
+
+.alto-8r {
+  height: 8rem;
+}
+
+.alto-9r {
+  height: 9rem;
+}
+
+.alto-10r {
+  height: 10rem;
+}
+
+body, p, span {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem !important;
+}
+
+ul, li {
+  margin: 0px;
+  padding: 0px;
+}
+
+.header__principal__cuenta {
+  font-family: "Josefin Sans", sans-serif !important;
+}
+
+.header__menu {
+  font-size: 15px;
+}
+
+.font-small {
+  font-size: small;
+}
+
+.font-medium {
+  font-size: medium;
+}
+
+.font-large {
+  font-size: large;
+}
+
+.font-x-large {
+  font-size: x-large;
+}
+
+.header__principal__cuenta {
+  font-family: "Josefin Sans", sans-serif !important;
+}
+
+.font-1r {
+  font-size: 1rem;
+}
+
+.font-2r {
+  font-size: 2rem;
+}
+
+.font-3r {
+  font-size: 3rem;
+}
+
+.font-4r {
+  font-size: 4rem;
+}
+
+.font-5r {
+  font-size: 5rem;
+}
+
+.font-6r {
+  font-size: 6rem;
+}
+
+.font-7r {
+  font-size: 7rem;
+}
+
+.font-8r {
+  font-size: 8rem;
+}
+
+.font-9r {
+  font-size: 9rem;
+}
+
+.font-10r {
+  font-size: 10rem;
+}
+
 .backcol-rojo {
   background-color: red;
 }
@@ -10,7 +292,15 @@
   background-color: yellow;
 }
 
-.backcol-jacinto {
+.backcol-blanco {
+  background-color: white;
+}
+
+.backcol-jacinto-h {
+  background-color: rgb(0, 255, 255);
+}
+
+.backcol-jacinto-f {
   background-color: rgb(129, 220, 215);
 }
 
@@ -30,6 +320,10 @@
   margin-right: 1rem;
 }
 
+.martot-1r {
+  margin: 1rem;
+}
+
 .marbot-2r {
   margin-bottom: 2rem;
 }
@@ -44,6 +338,10 @@
 
 .marright-2r {
   margin-right: 2rem;
+}
+
+.martot-2r {
+  margin: 2rem;
 }
 
 .marbot-3r {
@@ -62,6 +360,10 @@
   margin-right: 3rem;
 }
 
+.martot-3r {
+  margin: 3rem;
+}
+
 .marbot-4r {
   margin-bottom: 4rem;
 }
@@ -76,6 +378,10 @@
 
 .marright-4r {
   margin-right: 4rem;
+}
+
+.martot-4r {
+  margin: 4rem;
 }
 
 .marbot-5r {
@@ -94,6 +400,10 @@
   margin-right: 5rem;
 }
 
+.martot-5r {
+  margin: 5rem;
+}
+
 .marbot-6r {
   margin-bottom: 6rem;
 }
@@ -108,6 +418,10 @@
 
 .marright-6r {
   margin-right: 6rem;
+}
+
+.martot-6r {
+  margin: 6rem;
 }
 
 .marbot-7r {
@@ -126,6 +440,10 @@
   margin-right: 7rem;
 }
 
+.martot-7r {
+  margin: 7rem;
+}
+
 .marbot-8r {
   margin-bottom: 8rem;
 }
@@ -140,6 +458,10 @@
 
 .marright-8r {
   margin-right: 8rem;
+}
+
+.martot-8r {
+  margin: 8rem;
 }
 
 .marbot-9r {
@@ -158,6 +480,10 @@
   margin-right: 9rem;
 }
 
+.martot-9r {
+  margin: 9rem;
+}
+
 .marbot-10r {
   margin-bottom: 10rem;
 }
@@ -172,4 +498,328 @@
 
 .marright-10r {
   margin-right: 10rem;
+}
+
+.martot-10r {
+  margin: 10rem;
+}
+
+.padbot-1r {
+  padding-bottom: 1rem;
+}
+
+.padtop-1r {
+  padding-top: 1rem;
+}
+
+.padleft-1r {
+  padding-left: 1rem;
+}
+
+.padright-1r {
+  padding-right: 1rem;
+}
+
+.padtot-1r {
+  padding: 1rem;
+}
+
+.padbot-2r {
+  padding-bottom: 2rem;
+}
+
+.padtop-2r {
+  padding-top: 2rem;
+}
+
+.padleft-2r {
+  padding-left: 2rem;
+}
+
+.padright-2r {
+  padding-right: 2rem;
+}
+
+.padtot-2r {
+  padding: 2rem;
+}
+
+.padbot-3r {
+  padding-bottom: 3rem;
+}
+
+.padtop-3r {
+  padding-top: 3rem;
+}
+
+.padleft-3r {
+  padding-left: 3rem;
+}
+
+.padright-3r {
+  padding-right: 3rem;
+}
+
+.padtot-3r {
+  padding: 3rem;
+}
+
+.padbot-4r {
+  padding-bottom: 4rem;
+}
+
+.padtop-4r {
+  padding-top: 4rem;
+}
+
+.padleft-4r {
+  padding-left: 4rem;
+}
+
+.padright-4r {
+  padding-right: 4rem;
+}
+
+.padtot-4r {
+  padding: 4rem;
+}
+
+.padbot-5r {
+  padding-bottom: 5rem;
+}
+
+.padtop-5r {
+  padding-top: 5rem;
+}
+
+.padleft-5r {
+  padding-left: 5rem;
+}
+
+.padright-5r {
+  padding-right: 5rem;
+}
+
+.padtot-5r {
+  padding: 5rem;
+}
+
+.padbot-6r {
+  padding-bottom: 6rem;
+}
+
+.padtop-6r {
+  padding-top: 6rem;
+}
+
+.padleft-6r {
+  padding-left: 6rem;
+}
+
+.padright-6r {
+  padding-right: 6rem;
+}
+
+.padtot-6r {
+  padding: 6rem;
+}
+
+.padbot-7r {
+  padding-bottom: 7rem;
+}
+
+.padtop-7r {
+  padding-top: 7rem;
+}
+
+.padleft-7r {
+  padding-left: 7rem;
+}
+
+.padright-7r {
+  padding-right: 7rem;
+}
+
+.padtot-7r {
+  padding: 7rem;
+}
+
+.padbot-8r {
+  padding-bottom: 8rem;
+}
+
+.padtop-8r {
+  padding-top: 8rem;
+}
+
+.padleft-8r {
+  padding-left: 8rem;
+}
+
+.padright-8r {
+  padding-right: 8rem;
+}
+
+.padtot-8r {
+  padding: 8rem;
+}
+
+.padbot-9r {
+  padding-bottom: 9rem;
+}
+
+.padtop-9r {
+  padding-top: 9rem;
+}
+
+.padleft-9r {
+  padding-left: 9rem;
+}
+
+.padright-9r {
+  padding-right: 9rem;
+}
+
+.padtot-9r {
+  padding: 9rem;
+}
+
+.padbot-10r {
+  padding-bottom: 10rem;
+}
+
+.padtop-10r {
+  padding-top: 10rem;
+}
+
+.padleft-10r {
+  padding-left: 10rem;
+}
+
+.padright-10r {
+  padding-right: 10rem;
+}
+
+.padtot-10r {
+  padding: 10rem;
+}
+
+/* inicio */
+.videos__sm {
+  display: none;
+}
+
+.redes_mobile {
+  display: none;
+}
+
+.footer_mobile {
+  display: none;
+}
+
+.redes_mobile {
+  display: none;
+}
+
+.header_mobile {
+  display: none;
+}
+
+/* contenedores que desaparecen o cambian en mobile */
+@media (max-width: 768px) {
+  footer {
+    display: none;
+  }
+  #logo__jacinto {
+    display: none;
+  }
+  html {
+    font-size: 50%;
+  }
+  .videos__md {
+    display: none;
+  }
+  .contenedor_principal {
+    display: none;
+  }
+  .contactoWa {
+    display: none;
+  }
+  .header__principal {
+    display: none;
+  }
+}
+/* contenedores solo para mobile*/
+@media (max-width: 768px) {
+  .videos__sm {
+    display: block;
+  }
+  .contenedor_principal_mobile {
+    display: block;
+  }
+  .footer_mobile {
+    display: block;
+    position: fixed;
+    bottom: 0px;
+    z-index: 1000;
+    width: 100%;
+  }
+  .header_mobile {
+    display: block;
+    width: 100%;
+    background-color: rgb(0, 255, 255);
+  }
+  .redes_mobile {
+    display: block;
+  }
+}
+/* contenedores para tabler o mobile */
+@media (max-width: 992px) {
+  .beneficios__mobile {
+    display: block;
+  }
+}
+/* contenedores que desaparecen fuera de desktop */
+@media (max-width: 992px) {
+  .beneficios__lista {
+    display: none;
+  }
+}
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 700, "GRAD" 0, "opsz" 48;
+  font-size: 2rem !important;
+}
+
+#logo__jacinto {
+  height: 150px;
+  width: auto;
+  padding-left: 50px;
+}
+
+#label_buscar {
+  padding-top: 35px;
+  margin-left: 170px;
+}
+
+#buscar_boton {
+  border-radius: 2px;
+  padding-top: 35px;
+}
+
+.icono-redes {
+  width: 12px;
+  height: 12px;
+}
+
+.contactoWa div img {
+  width: 3rem;
+  height: auto;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+}
+
+.contactoWa img:hover {
+  transform: scale(1.5, 1.5);
 }/*# sourceMappingURL=main.css.map */

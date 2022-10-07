@@ -11,13 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet"><!-- importo font de google fonts -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="../styles/styles.css"/> -->
-    <link rel="stylesheet" href="../sass/main.css">
+    <link rel="stylesheet" href="../sass/main.css"><!-- utilizo css creado con SASS -->
     <meta name="description" content="MEdios de pago. Envios a domicilio Rosario - Funes - Roldán Y si estás más lejos te lo enviamos por correo!">
     <meta name="keywords" content="compras, bebes, body, tarjetas, niños, niñas, pagos, financiacion">
+    <link rel="icon" type="image/png" href="../img/logojacinto.png"/>
 </head>
 <body>
     <header id="header">
-        <div class="header__principal">
+        <div class="header__principal font-small backcol-jacinto-h">
             <div class="header__principal__cuenta">
                 <a href="./carrito.html">Iniciar sesión</a>
                 <a href="./carrito.html">Crear cuenta</a>
@@ -26,13 +27,13 @@
                 <a href="./carrito.html"><span class="material-symbols-outlined">shopping_cart</span></a>
             </div>
         </div>
-        <div class="header_mobile">
+        <div class="header_mobile backcol-jacinto-h">
             <ul class="header_mobile_flex">
                 <li><a href="./carrito.html"><span class="material-symbols-outlined">login</span></a></li>
                 <li><a href="./carrito.html"><span class="material-symbols-outlined">person_add</span></a></li>
             </ul>
         </div>
-        <div class="header__menu">
+        <div class="header__menu font-1r">
             <nav class="navbar navbar-expand-lg" style="background-color: rgb(129, 220, 215)">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="../index.html"><img src="../img/logojacinto.png" alt="logotipo de la página" id="logo__jacinto"></a>
@@ -65,16 +66,17 @@
                 </nav>
             </div>
         </header>
-    <section class="destacados">
-        <div>
+        <section class="destacados">
+        <div class="padtot-1r backcol-jacinto-h">
             <h2>MEDIOS DE PAGO</h2>
         </div>
-        <div>
-            <ul class="mpagos">
-                <li>Tarjetas de crédito</li>
-                <li>Billeteras virtuales</li>
-                <li>Efectivo y transferencias</li>
-                <li>Promociones</li>
+        <div class="padtot-1r backcol-blanco">
+            <ul class="mpagos backcol-blanco">
+                <li class="font-2r alto-6r martop-2r"><img src="../img/tarjeta-de-debito.png" alt="tarjetas" class=" alto-3r marright-3r">Tarjetas de crédito y débito</li>
+                <li class="font-2r alto-6r"><img src="../img/pago-en-linea.png" alt="virtual" class=" alto-3r marright-3r">Billeteras virtuales</li>
+                <li class="font-2r alto-6r"><img src="../img/pago-web.png" alt="transferencias" class=" alto-3r marright-3r">Transferencias bancarias</li>
+                <li class="font-2r alto-6r"><img src="../img/metodo-de-pago.png" alt="efectivo" class=" alto-3r marright-3r">Efectivo</li>
+                <li class="font-2r alto-6r"><img src="../img/promocion.png" alt="promociones" class=" alto-3r marright-3r">Promociones y descuentos</li>
             </ul>
         </div>
 
@@ -90,7 +92,7 @@
             </ul>
         </div>
     </section>
-    <div class="footer_mobile">
+    <div class="footer_mobile backcol-jacinto-h">
         <ul class="footer_mobile_flex">
             <li><a href="../index.html"><span class="material-symbols-outlined">home</span></a></li>
             <li><a href="./carrito.html"><span class="material-symbols-outlined">shopping_cart</span></a></li>
@@ -99,7 +101,7 @@
     </div>
     <footer><!-- Pie de página -->
         <div class="footer">
-            <div class="izquierdo">
+            <div class="izquierdo backcol-jacinto-h">
                 <h3>INFO</h3>
                 <nav class="info_izquierdo">
                     <ul class="pie"> 
@@ -109,7 +111,7 @@
                     </ul>
             </nav>
         </div>
-        <div class="centro">
+        <div class="centro backcol-jacinto-f">
             <h3>MENU</h3>
             <nav>
                 <ul class="pie">
@@ -121,10 +123,10 @@
                 </ul>
             </nav>
         </div>
-        <div class="derecho">
+        <div class="derecho backcol-jacinto-h">
             <h3>REDES</h3>
             <nav>
-                <ul class="pie">
+                <ul class="pie backcol-jacinto-h">
                     <li><a href="https://www.instagram.com/"><img src="../img/instagram.svg" alt="instagram" class="icono-redes"> Instagram</a></li>
                     <li><a href="https://web.whatsapp.com/"><img src="../img/whatsapp.svg" alt="whatsapp" class="icono-redes"> Whatsapp</a></li>
                     <li><a href="https://youtube.com.ar"><img src="../img/youtube.svg" alt="yootube" class="icono-redes">YouTube</a></li>
@@ -137,7 +139,7 @@
             <p class="designer">WEB Designer   <img src="../img/logogr.JPG" alt="Logo GR" class="icono-redes">   Guillermo Rocatti</p>
         </div>
     </footer>
-    <a class="contactoWa" href="https://web.whatsapp.com/">
+    <a class="contactoWa padright-2r padbot-2r" href="https://web.whatsapp.com/">
         <div>
             <img src="../img/whatsapp.png" alt="wa">
         </div>
