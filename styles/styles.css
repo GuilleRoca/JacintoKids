@@ -6,6 +6,9 @@ body, p, span{
   font-family: 'Josefin Sans' , sans-serif ;
   font-size: 1rem !important;
 } 
+body{
+  max-width: 1600px;
+}
 ul, li{
   margin: 0px;
   padding: 0px;
@@ -33,13 +36,32 @@ ul, li{
     display: none;
   }
 }
+.active_menu{
+  background-color: rgb(129, 220, 215) !important;
+}
+.header_container{
+  background-image: url("../img/portrait-of-young-family.jpg");
+  height: 500px;
+  width: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  vertical-align: middle;
+}
+.header_waves{
+  background-image: url("../img/wave-1.svg");
+  height: 500px;
+  width: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  vertical-align: middle;
+}
 .header__principal{
   display: flex;
   font-size:small;
-  background-color: rgb(0, 255, 255);
   padding: 0px 25px;
   justify-content: space-between;
   align-items: center;
+  background-color: beige;
 }
 .header__principal__cuenta{
   font-family: 'Josefin Sans' , sans-serif !important;
@@ -51,6 +73,33 @@ ul, li{
   'GRAD' 0,
   'opsz' 48;
   font-size: 2rem !important;
+}
+.font_2r {
+  font-size: 2rem !important;
+}
+.font_3r {
+  font-size: 3rem !important;
+}
+.font_4r {
+  font-size: 4rem !important;
+}
+.font_5r {
+  font-size: 5rem !important;
+}
+.alto_1r{
+  height: 1rem;
+}
+.alto_2r{
+  height: 2rem;
+}
+.alto_3r{
+  height: 3rem;
+}
+.alto_4r{
+  height: 4rem;
+}
+.alto_5r{
+  height: 5rem;
 }
 .header__secundario{
   display: flex;
@@ -89,15 +138,17 @@ header nav ul li a{
   margin: 10px;
 }
 .main{
-  background-image: url("../img/fondo.png");
-  height: 200px;
+  height: 300px;
   width: auto;
   background-repeat: no-repeat;
   background-size: cover;
+  vertical-align: middle;
 }
 .main h1, .main h2{
   text-align: center;
   padding: 15px;
+  vertical-align: middle;
+  text-shadow: 0 0 8px black;
 }
 .main__contacto h2{
   text-align: center;
@@ -111,14 +162,33 @@ header nav ul li a{
 }
 .videos{
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
   padding: 20px;
 }
 .videos div{
   text-align: center;
 }
-.destacados div, #mapa div, .main__contacto div{
-  background-color: rgb(0, 255, 255);
+.titulo{
+  background-color: rgb(129, 220, 215);
+  padding: 1rem;
+  margin-top: 3rem;
+  margin-left: 14rem;
+  margin-right: 14rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.subtitulo{
+  background-color:antiquewhite;
+  padding: 1rem;
+  margin-left: 8rem;
+  margin-right: 8rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+.subtitulo div h4{
+  color: brown;
+}
+#mapa div, .main__contacto div{
   padding: 20px;
 }
 .destacados div h2, #mapa div h2, .main__contacto div h2{
@@ -130,8 +200,18 @@ header nav ul li a{
   flex-wrap: wrap;
   padding: 35px;
   margin: 25px;
-  justify-content: space-evenly;
+  justify-content: space-around;
   list-style: none;
+}
+.destacados{
+  background: url(../img/gold-polka-dots-beige-background-1.jpg) 0 0 repeat;
+}
+.destacados_cards{
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-left: 6rem;
+  margin-right: 6rem;
+
 }
 .destacados__contenedor li{
   display: flex;
@@ -139,6 +219,52 @@ header nav ul li a{
   align-items: center;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+.secciones{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+  justify-content: space-around;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+.seccionA_fondo{
+  background-image: url(../img/baby_accesorios.jpg);
+  background-repeat: no-repeat;
+  background-size:  100% 100%;
+  width: 400px;
+  height: 250px;
+  border-radius: 8px;
+}
+.seccionB_fondo{
+  background-image: url(../img/baby_navidad.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 400px;
+  height: 250px;
+  border-radius: 8px;
+}
+.seccionA_opacidad{
+  background-color: rgba(250, 180, 50, 0.3);
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+}
+.seccionB_opacidad{
+  background-color: rgba(235, 0, 0, 0.2);
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+}
+.secciones_text h2, .secciones_text h4{
+  text-shadow: 0 0 8px black;
+}
+.seccion_contenedor{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  text-align: center;
 }
 .card div div{
   display: flex;
@@ -151,6 +277,7 @@ header nav ul li a{
 .card:hover{
   transform: scale(1.2,1.2);
   z-index: 1000;
+  box-shadow: inset;
 }
 #mapa ul, #mapa ul li{
   text-align: center;
@@ -170,7 +297,7 @@ header nav ul li a{
   padding: 40px;
 }
 .reparacion div{
-text-align: center;
+  text-align: center;
 }
 .reparacion p{
   padding: 30px;
@@ -216,10 +343,20 @@ justify-content: center;
 }
 .beneficios__lista{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 .beneficios__lista li{
   list-style: none;
+}
+.beneficios__lista li img{
+  margin-bottom: 1rem;
+  height: 4rem;
+  width: auto;
+}
+.beneficios_new div div div img{
+  margin-bottom: 1rem;
+  height: 5rem;
+  width: auto;
 }
 #beneficios__lista__izq{
   border-right: 2px solid black;
@@ -242,9 +379,15 @@ justify-content: center;
     display: none;
   }
 }
+footer{
+  background-color: beige;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  background-color: beige;
 }
 .footer div h3{
   text-align: center !important;
@@ -252,17 +395,17 @@ justify-content: center;
 .izquierdo {
   padding-top: 10px !important;
   padding-bottom: 10px !important;
-  background-color: rgb(0, 255, 255);
+ /*  background-color: rgb(0, 255, 255); */
 }
 .centro {
   padding-top: 10px !important;
   padding-bottom: 10px !important;
-  background-color:rgb(129, 220, 215);
+/*   background-color:rgb(129, 220, 215); */
 }
 .derecho {
   padding-top: 10px!important;
   padding-bottom: 10px!important;
-  background-color: rgb(0, 255, 255);
+/*   background-color: rgb(0, 255, 255); */
 }
 .icono-redes {
   width: 12px;
@@ -293,35 +436,74 @@ justify-content: center;
   right: 2rem;
   z-index: 1000;
 }
-.contactoWa img:hover{
+.contactoWa div img:hover{
   transform: scale(1.5,1.5);
+}
+.contactoWa_mobile{
+  display: none;
+}
+.contactoWa_mobile div:hover{
+  transform: scale(1.5,1.5);
+}
+.contactoWa_mobile div{
+  position: fixed;
+  bottom: 7rem;
+  right: 2rem;
+  z-index: 1000;
+  background-color: rgb(100,177,97);
+  padding: 5px;
+  margin: 0px;
+  text-align: center;
+  border-radius: 2rem;
+}
+.contactoWa_mobile div p{
+  margin: 0px;
+  padding: 0px;
+  font-size: 2rem !important;
+}
+.contactoWa_mobile div p img{
+  width: 2rem;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
 }
 @media (max-width: 768px){
   .contactoWa{
     display: none;
   }
+  .contactoWa_mobile{
+    display: block;
+  }
 }
 .designer {
   text-align: center;
-  padding: 5px;
+  margin-bottom: 0px;
 }
 .footer_mobile{
-  background-color: rgb(0, 255, 255);
-  height: 3rem;
+  background-color: rgb(129, 220, 215);
+  height: 5rem;
   display: none;
 }
 .footer_mobile_flex{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 0px;
+  padding: 0px !important;
+  margin: 0px !important;
+  height: 100%;
 }
 .footer_mobile_flex li{
   list-style: none;
   text-align: center;
-  padding-top: 0.5rem;
+  height: 100%;
+}
+.footer_mobile_flex li a span{
+  height: 100%;
+  width: 5rem;
+  font-size: 5rem;
 }
 .redes_mobile{
   display: none;
+  background-color: beige;
 }
 .redes_mobile div ul{
   display: grid;
@@ -334,8 +516,8 @@ justify-content: center;
   padding-top: 0.5rem;
 }
 .header_mobile{
-  background-color: rgb(0, 255, 255);
-  height: 3rem;
+  background-color: rgb(129, 220, 215);
+  height: 6rem;
   display: none;
 }
 .header_mobile_flex{
@@ -359,7 +541,7 @@ justify-content: center;
   .header_mobile{
     display: block;
     width: 100%;
-    background-color: rgb(0, 255, 255);
+    background-color: rgb(129, 220, 215);
   }
   .redes_mobile{
     display: block;
