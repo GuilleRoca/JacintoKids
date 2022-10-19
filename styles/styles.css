@@ -266,6 +266,46 @@ header nav ul li a{
   align-content: center;
   text-align: center;
 }
+@media  (max-width: 768px){
+  .header_container{
+    height: 400px;
+  }
+  .header_waves {
+    height: 430px;
+  }
+  .redes_mobile div ul li {
+    padding-right: 8rem;
+  }
+  .seccionA_fondo{
+    width: 300px;
+    height: 150px;
+  }
+  .seccionB_fondo{
+    width: 300px;
+    height: 150px;
+  }
+  .titulo{
+    padding: 1rem;
+    margin-top: 3rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
+  }
+  .subtitulo{
+    padding: 1rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+  .destacados_cards{
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .destacados__contenedor{
+    padding: 0;
+  }
+  .main h2{
+    display: none;
+  }
+}
 .card div div{
   display: flex;
   padding: 0px;
