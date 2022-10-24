@@ -4,7 +4,7 @@
 }
 body, p, span{
   font-family: 'Josefin Sans' , sans-serif ;
-  font-size: 1rem !important;
+/*   font-size: 1rem !important; */
 } 
 body{
   max-width: 1600px;
@@ -13,9 +13,6 @@ ul, li{
   margin: 0px;
   padding: 0px;
 }
-/* #header {
-  background-color: rgb(129, 5, 215);
-} */
 .videos__sm{
   display: none;
 }
@@ -47,6 +44,15 @@ ul, li{
   background-size: cover;
   vertical-align: middle;
 }
+.header_container_second{
+  background-image: url("../img/nuves-colores.jpg");
+  height: auto;
+  width: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  vertical-align: middle;
+  margin-bottom: 10rem;
+}
 .header_waves{
   background-image: url("../img/wave-1.svg");
   height: 500px;
@@ -66,6 +72,9 @@ ul, li{
 .header__principal__cuenta{
   font-family: 'Josefin Sans' , sans-serif !important;
 }
+.carousel{
+  max-width: 500px;
+}
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 1,
@@ -73,6 +82,41 @@ ul, li{
   'GRAD' 0,
   'opsz' 48;
   font-size: 2rem !important;
+}
+.producto_detalle{
+  list-style: none;
+}
+.producto_detalle_foto img{
+  height: 8rem;
+  width: auto;
+  margin-bottom: 5rem;
+}
+@media  (max-width: 768px){
+  .producto_detalle{
+    display: flex;
+    height: 15rem;
+    justify-content: space-around;
+    margin-bottom: 3rem ;
+  }
+  .producto_detalle_foto img{
+    height: 13rem;
+    width: auto;
+    margin-bottom: 0rem;
+  }
+  .producto_detalle_descrip{
+    height: 100%;
+    font-size: 2rem;
+    margin-top: 5px;
+  }
+  body{
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+}
+@media (max-width: 992px){
+  .main{
+    display: none;
+  }
 }
 .font_2r {
   font-size: 2rem !important;
@@ -119,7 +163,6 @@ ul, li{
   border-radius: 2px;
   padding-top: 35px;
 }
-
 .header__menu{
   font-size: 15px;
 }
@@ -155,7 +198,7 @@ header nav ul li a{
   height: auto;
   width: auto;
 }
-.main__contacto__form{
+.main_contacto_form{
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   padding: 20px;
@@ -176,6 +219,15 @@ header nav ul li a{
   margin-right: 14rem;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
+}
+.titulo_second{
+  background-color: rgb(129, 220, 215);
+  padding: 1rem;
+  margin-top: 6rem;
+  margin-left: 14rem;
+  margin-right: 14rem;
+  margin-bottom: 6rem;
+  border-radius: 1rem;
 }
 .subtitulo{
   background-color:antiquewhite;
@@ -204,7 +256,8 @@ header nav ul li a{
   list-style: none;
 }
 .destacados{
-  background: url(../img/gold-polka-dots-beige-background-1.jpg) 0 0 repeat;
+  background: url(../img/fondo-lunares.jpg) 0 0 repeat;
+  background-size: contain;
 }
 .destacados_cards{
   margin-top: 0px;
@@ -302,8 +355,14 @@ header nav ul li a{
   .destacados__contenedor{
     padding: 0;
   }
+  .main{
+    display: block;
+  }
   .main h2{
     display: none;
+  }
+  .seccion_contenedor {
+    padding-top: 2rem;
   }
 }
 .card div div{
@@ -328,6 +387,10 @@ header nav ul li a{
 }
 .mpagos{
   background-color: white;
+}
+.mpagos li{
+  list-style: none;
+  text-align: center;
 }
 .mpagos li{
   list-style: none;
@@ -367,6 +430,9 @@ justify-content: center;
   display: none;
   margin: 1rem !important;
 }
+.mapa_mobile{
+  display: none;
+}
 @media (max-width: 768px){
   .contenedor_principal_mobile{
     display: block;
@@ -374,50 +440,17 @@ justify-content: center;
   .contenedor_principal{
     display: none;
   }
-}
-.beneficios{
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-size: larger;
-  text-align: center;
-}
-.beneficios__lista{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-}
-.beneficios__lista li{
-  list-style: none;
-}
-.beneficios__lista li img{
-  margin-bottom: 1rem;
-  height: 4rem;
-  width: auto;
+  .mapa_desktop{
+    display: none;
+  }
+  .mapa_mobile{
+    display: block;
+  }
 }
 .beneficios_new div div div img{
   margin-bottom: 1rem;
   height: 5rem;
   width: auto;
-}
-#beneficios__lista__izq{
-  border-right: 2px solid black;
-}
-#beneficios__lista__centro{
-  border-left: 2px solid black;
-  border-right: 2px solid black;
-}
-#beneficios__lista__der{
-  border-left: 2px solid black;
-}
-.beneficios__mobile{
-  display: none;
-}
-@media (max-width: 992px){
-  .beneficios__mobile{
-    display: block;
-  }
-  .beneficios__lista{
-    display: none;
-  }
 }
 footer{
   background-color: beige;
@@ -435,17 +468,14 @@ footer{
 .izquierdo {
   padding-top: 10px !important;
   padding-bottom: 10px !important;
- /*  background-color: rgb(0, 255, 255); */
 }
 .centro {
   padding-top: 10px !important;
   padding-bottom: 10px !important;
-/*   background-color:rgb(129, 220, 215); */
 }
 .derecho {
   padding-top: 10px!important;
   padding-bottom: 10px!important;
-/*   background-color: rgb(0, 255, 255); */
 }
 .icono-redes {
   width: 12px;
@@ -519,8 +549,17 @@ footer{
   text-align: center;
   margin-bottom: 0px;
 }
+.designer_mobile {
+  text-align: center;
+  margin: 4px !important;
+  height: 5rem !important;
+  display: none;
+}
+.space{
+  height: 6rem;
+}
 .footer_mobile{
-  background-color: rgb(129, 220, 215);
+  background-color: beige;
   height: 5rem;
   display: none;
 }
@@ -556,14 +595,12 @@ footer{
   padding-top: 0.5rem;
 }
 .header_mobile{
-  background-color: rgb(129, 220, 215);
   height: 6rem;
   display: none;
 }
 .header_mobile_flex{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 0px;
+  display: flex;
+  padding: 0px  !important;
 }
 .header_mobile_flex li{
   list-style: none;
@@ -578,10 +615,12 @@ footer{
     z-index: 1000;
     width: 100%;
   }
+  .designer_mobile{
+    display: block;
+  }
   .header_mobile{
     display: block;
-    width: 100%;
-    background-color: rgb(129, 220, 215);
+    width: 20rem;
   }
   .redes_mobile{
     display: block;

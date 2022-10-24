@@ -15,28 +15,54 @@
     <meta name="keywords" content="compras, ubicacion, body, funes, niños, niñas, rosario, roldan">
     <link rel="icon" type="image/png" href="../img/logojacinto.png"/>
 </head>
-<body>
+<body class="mx-auto">
+    
     <header id="header">
         <div class="header__principal">
-            <div class="header__principal__cuenta">
-                <a href="./carrito.html">Iniciar sesión</a>
-                <a href="./carrito.html">Crear cuenta</a>
+            <div class="header__principal__cuenta ">
+                <a href="./reparacion.html" class="text-decoration-none text-black">Iniciar sesión</a>
+                <a href="./reparacion.html" class="text-decoration-none text-black">Crear cuenta</a>
             </div>
-                <div>
-                    <a href="./carrito.html"><span class="material-symbols-outlined">shopping_cart</span></a>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <p class="m-0 p-0 align-middle">Nueva temporada Spring-Summer !! <img src="../img/sol.png" alt="sol" class="alto_1r px-2"><img src="../img/pelota-de-playa.png" alt="pelota" class="alto_1r"></p>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="m-0 p-0 align-middle">3 y 6 cuotas sin interes con todas las tarjetas de crédito!!<img src="../img/promocion.png" alt="promo" class="alto_1r px-2"></p>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="m-0 p-0 align-middle">Hasta 40% de descuento en la temporada otoño-invierno!!<img src="../img/nieve.png" alt="nieve" class="alto_1r px-2"><img src="../img/muneca.png" alt="muñeco de nieve" class="alto_1r"></p>
+                    </div>
                 </div>
             </div>
-            <div class="header_mobile">
-                <ul class="header_mobile_flex">
-                    <li><a href="./carrito.html"><span class="material-symbols-outlined">login</span></a></li>
-                    <li><a href="./carrito.html"><span class="material-symbols-outlined">person_add</span></a></li>
-                </ul>
+            <div>
+                <a href="./carrito.html"><span class="material-symbols-outlined text-black">shopping_cart</span></a>
             </div>
+        </div>
+        <div class="redes_mobile">
+            <div class="font_3r">
+                <ul class="col-12 p-4">
+                    <li class="text-center text-black">REDES</li>
+                    <li class="p-0"><a href="https://www.instagram.com/"><img src="../img/instagram.svg" alt="instagram" class="alto_4r"></a></li>
+                    <li class="p-0"><a href="https://web.whatsapp.com/"><img src="../img/whatsapp.svg" alt="whatsapp" class="alto_4r"></a></li>
+                    <li class="p-0"><a href="https://youtube.com.ar"><img src="../img/youtube.svg" alt="yootube" class="alto_4r"></a></li>
+                    <li class="p-0"><a href="https://twitter.com/"><img src="../img/twitter.svg" alt="twitter" class="alto_4r"></a></li>
+                </ul>       
+            </div>
+        </div>
+        <div class="header_container_second">
             <div class="header__menu">
-                <nav class="navbar navbar-expand-lg" style="background-color: rgb(129, 220, 215)">
+                <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="../index.html"><img src="../img/logojacinto.png" alt="logotipo de la página" id="logo__jacinto"></a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+                        <div class="header_mobile">
+                            <ul class="header_mobile_flex">
+                                <li><a href="./reparacion.html"><span class="material-symbols-outlined font_5r text-black">login</span></a></li>
+                                <li><a href="./reparacion.html"><span class="material-symbols-outlined font_5r text-black">person_add</span></a></li>
+                            </ul>
+                        </div>
+                        <a class="navbar-brand mx-5" href="../index.html"><img src="../img/jacitook.png" alt="logotipo de la página" id="logo__jacinto" class="px-0"></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="height:5rem; width:5rem"><span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -50,7 +76,7 @@
                                     <a class="nav-link" href="./mpagos.html">PAGOS</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link btn btn-primary text-bg-info active" aria-current="page" href="./ubicacion.html">UBICACIÓN</a>
+                                    <a class="nav-link btn active active_menu" aria-current="page" href="./ubicacion.html">UBICACIÓN</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="./contacto.html">CONTACTO</a>
@@ -64,37 +90,36 @@
                     </div>
                 </nav>
             </div>
-        </header>
-    <div id="mapa">
-        <div>
-            <h2>UBICACIÓN</h2>
         </div>
-        <ul>
-            <li>
-                <h2>No dejes de visitarnos en nuestra<h2> 
-                <h2> nueva tienda en el Abasto Shopping</h2>
-            </li>
-            <li>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19121.97280443047!2d-58.41658183423149!3d-34.60193474165664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca8c854bd13f%3A0xfc0cf5c054da4aa1!2sAbasto%20Shopping!5e0!3m2!1ses-419!2sar!4v1661224026683!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </li>
+    </header>
+        <main class="main__contacto">
+            <div class="titulo_second">
+                <h2 class="mt-2">UBICACIÓN</h2>
+            </div>
+            <h2>No dejes de visitarnos en nuestra<h2> 
+            <h2> nueva tienda en el Abasto Shopping</h2>
+        </main>
+        <div id="mapa">
+            <ul>
+                <li class="mapa_desktop">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19121.97280443047!2d-58.41658183423149!3d-34.60193474165664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca8c854bd13f%3A0xfc0cf5c054da4aa1!2sAbasto%20Shopping!5e0!3m2!1ses-419!2sar!4v1661224026683!5m2!1ses-419!2sar" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </li>
+                <li class="mapa_mobile">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19121.97280443047!2d-58.41658183423149!3d-34.60193474165664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca8c854bd13f%3A0xfc0cf5c054da4aa1!2sAbasto%20Shopping!5e0!3m2!1ses-419!2sar!4v1661224026683!5m2!1ses-419!2sar" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </li>
         </ul>
     </div>
-    <section class="redes_mobile">
+    <section class="designer_mobile">
         <div>
-            <ul>
-                <li>REDES</li>
-                <li><a href="https://www.instagram.com/"><img src="../img/instagram.svg" alt="instagram" class="icono-redes"></a></li>
-                <li><a href="https://web.whatsapp.com/"><img src="../img/whatsapp.svg" alt="whatsapp" class="icono-redes"></a></li>
-                <li><a href="https://youtube.com.ar"><img src="../img/youtube.svg" alt="yootube" class="icono-redes"></a></li>
-                <li><a href="https://twitter.com/"><img src="../img/twitter.svg" alt="twitter" class="icono-redes"></a></li>
-            </ul>
+            <p class="designer font_2r">By <img src="../img/logogr.JPG" alt="Logo GR" class="icono-redes"> Guillermo Rocatti</p>
         </div>
+        <div class="space"></div>
     </section>
     <div class="footer_mobile">
         <ul class="footer_mobile_flex">
-            <li><a href="../index.html"><span class="material-symbols-outlined">home</span></a></li>
-            <li><a href="./carrito.html"><span class="material-symbols-outlined">shopping_cart</span></a></li>
-            <li><a href="./carrito.html"><span class="material-symbols-outlined">search</span></li></a>
+            <li><a href="../index.html"><span class="material-symbols-outlined font_5r  text-black">home</span></a></li>
+            <li><a href="./carrito.html"><span class="material-symbols-outlined font_5r  text-black">shopping_cart</span></a></li>
+            <li><a href="./reparacion.html"><span class="material-symbols-outlined font_5r  text-black">search</span></li></a>
         </ul>
     </div>
     <footer><!-- Pie de página -->
@@ -107,39 +132,45 @@
                         <li><a href="./cambios.html">Politicas de cambios</a></li>
                         <li><a href="./arrepentimiento.html">Boton de arrepentimiento</a></li>
                     </ul>
-            </nav>
+                </nav>
+            </div>
+            <div class="centro">
+                <h3>MENU</h3>
+                <nav>
+                    <ul class="pie">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="./productos.html">Productos</a></li>
+                        <li><a href="./mpagos.html">Medios de pago</a></li>
+                        <li><a href="./ubicacion.html">Ubicación</a></li>
+                        <li><a href="./contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="derecho">
+                <h3>REDES</h3>
+                <nav>
+                    <ul class="pie">
+                        <li><a href="https://www.instagram.com/"><img src="../img/instagram.svg" alt="instagram" class="icono-redes"> Instagram</a></li>
+                        <li><a href="https://web.whatsapp.com/"><img src="../img/whatsapp.svg" alt="whatsapp" class="icono-redes"> Whatsapp</a></li>
+                        <li><a href="https://youtube.com.ar"><img src="../img/youtube.svg" alt="yootube" class="icono-redes">YouTube</a></li>
+                        <li><a href="https://twitter.com/"><img src="../img/twitter.svg" alt="twitter" class="icono-redes"> Twitter</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-        <div class="centro">
-            <h3>MENU</h3>
-            <nav>
-                <ul class="pie">
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="./productos.html">Productos</a></li>
-                    <li><a href="./mpagos.html">Medios de pago</a></li>
-                    <li><a href="./ubicacion.html">Ubicación</a></li>
-                    <li><a href="./contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="derecho">
-            <h3>REDES</h3>
-            <nav>
-                <ul class="pie">
-                    <li><a href="https://www.instagram.com/"><img src="../img/instagram.svg" alt="instagram" class="icono-redes"> Instagram</a></li>
-                    <li><a href="https://web.whatsapp.com/"><img src="../img/whatsapp.svg" alt="whatsapp" class="icono-redes"> Whatsapp</a></li>
-                    <li><a href="https://youtube.com.ar"><img src="../img/youtube.svg" alt="yootube" class="icono-redes">YouTube</a></li>
-                    <li><a href="https://twitter.com/"><img src="../img/twitter.svg" alt="twitter" class="icono-redes"> Twitter</a></li>
-                </ul>
-            </nav>
-        </div>
-        </div>
+        
+        <a class="contactoWa" href="https://web.whatsapp.com/">
+            <div>
+                <img src="../img/whatsapp.png" alt="wa">
+            </div>
+        </a>
         <div>
             <p class="designer">WEB Designer   <img src="../img/logogr.JPG" alt="Logo GR" class="icono-redes">   Guillermo Rocatti</p>
         </div>
     </footer>
-    <a class="contactoWa" href="https://web.whatsapp.com/">
+    <a class="contactoWa_mobile" href="https://web.whatsapp.com/">
         <div>
-            <img src="../img/whatsapp.png" alt="wa">
+            <p class="text-white"><img src="../img/whatsapp.png" alt="wa_mobile"> Chat</p>
         </div>
     </a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
