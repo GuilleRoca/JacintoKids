@@ -16,6 +16,32 @@ ul, li{
 .videos__sm{
   display: none;
 }
+.login, .create{
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10000;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 15px 15px;
+  background: rgba(0,0,0,.6);
+  opacity: 1;
+  transition: opacity .15s linear;
+}
+.container_login, .container_create{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.login_form, .create_form{
+  width: 500px;
+  padding: 50px;
+  border-radius: 5px;
+}
 @media(max-width: 768px){
   footer{
     display: none;

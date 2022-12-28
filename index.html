@@ -21,8 +21,8 @@
     <header id="header">
         <div class="header__principal">
             <div class="header__principal__cuenta ">
-                <a href="./layout/reparacion.html" class="text-decoration-none text-black">Iniciar sesión</a>
-                <a href="./layout/reparacion.html" class="text-decoration-none text-black">Crear cuenta</a>
+                <a href="#" class="login_action text-decoration-none text-black">Iniciar sesión</a>
+                <a href="#" class="create_action text-decoration-none text-black">Crear cuenta</a>
             </div>
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -63,7 +63,7 @@
                                     <li><a href="./layout/reparacion.html"><span class="material-symbols-outlined font_5r text-black">person_add</span></a></li>
                                 </ul>
                             </div>
-                            <a class="navbar-brand mx-5" href="index.html"><img src="./img/jacitook.png" alt="logotipo de la página" id="logo__jacinto" class="px-0"></a>
+                            <a class="navbar-brand mx-5" href="./index.html"><img src="./img/jacitook.png" alt="logotipo de la página" id="logo__jacinto" class="px-0"></a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="height:5rem; width:5rem"><span class="navbar-toggler-icon"></span>
                             </button>
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -99,7 +99,67 @@
             </div>
         </div>
     </header>
-    
+
+    <section id="login_section">
+        <div class="login">
+            <div class="container_login">
+                <form class="login_form bg-white">
+                    <div class="container">
+                        <div class="mb-3">
+                            <h2 class="text-dark">Iniciar Sesión</h2>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label text-dark">Email</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="contraseña" class="form-label text-dark">Contraseña</label>
+                            <input type="password"  class="form-control" id="exampleFormControlInput2" placeholder="*****"  pattern="[a-zA-Z0-9]{6,15}" title="Una contraseña válida debe estar compuesta por letras y/o números y tener una longitud entre 6 y 15 caracteres" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="submit" class="login_button btn btn-outline-info text-primary" value="Ingresar">
+                            <input type="button" class="cancel_login btn btn-outline-info text-primary" value="Cancelar">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="create">
+            <div class="container_create">
+                <form class="create_form bg-white">
+                    <div class="container">
+                        <div class="mb-1">
+                            <h2 class="text-dark">Crear Usuario</h2>
+                        </div>
+                        <div class="mb-3">
+                            <label for="text" class="form-label text-dark">Nombre</label>
+                            <input type="text" name="nombre" class="form-control" id="exampleFormControlInput1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="text" class="form-label text-dark">Apellido</label>
+                            <input type="text" name="nombre" class="form-control" id="exampleFormControlInput1">    
+                        </div>
+                        <div class="mb-3">
+                            <label for="number" class="form-label text-dark">DNI</label>
+                            <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="11222333">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label text-dark">Email</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="contraseña" class="form-label text-dark">Contraseña</label>
+                            <input type="password"  class="form-control" id="exampleFormControlInput2" placeholder="*****"  pattern="[a-zA-Z0-9]{6,15}" title="Una contraseña válida debe estar compuesta por letras y/o números y tener una longitud entre 6 y 15 caracteres" required>
+                        </div>
+                        <div class="mb-1">
+                            <input type="submit" class="login_button btn btn-outline-info text-primary" value="Ingresar">
+                            <input type="button" class="cancel_create btn btn-outline-info text-primary" value="Cancelar">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
     <section class="videos">
         <div></div>
         <div class="videos_container">
@@ -405,5 +465,8 @@
     <script>
       AOS.init();
     </script>
+    <script src="./js/usuarios.js"></script>
+    <script src="./js/productos.js"></script>
+    <script src="./js/login.js"></script>
 </body>
 </html>
