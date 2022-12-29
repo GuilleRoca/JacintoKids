@@ -1,45 +1,202 @@
 const productos = [{
     "id": 1,
     "name": "Remera Alelí",
-    "descripcion" : `Remera mangas cortas con volados en manga.
-    Tela: morley.
-    Color: celeste oscuro.
-    
-    **No incluye calza
-    
-    Medidas:
-    6 Meses:
-    Largo: 31cm
-    Ancho:22cm
-     
-    9 Meses:
-    Largo: 32cm
-    Ancho: 24cm
-     
-    12 Meses
-    Largo: 36cm
-    Ancho:26cm
-     
-    18 Meses
-    Largo: 39cm
-    Ancho:29 cm 
-     
-    Talle 2 años
-    Largo: 41cm
-    Ancho: 31cm
-     
-    Talle 4 años
-    Largo: 42,5cm
-    Ancho: 33cm
-     
-    Talle 6 años
-    Largo: 48cm
-    Ancho:35cm`,
-    "precio": 2490,
-    "precioAntes":"",
-    "categoria":"",
+    "precioAhora":2490,
+    "precioAntes":"Antes $3700",
+    "categoria":"Remeras",
     "img":"https://d22fxaf9t8d39k.cloudfront.net/e215f2657700ad24e87e2bd8a290e2b3aa7450bb36f2c16c3c83db08644ffa2d82114.jpeg",
-    "cuotas":1,
+    "descuento":0,
+},{
+    "id": 2,
+    "name": "Manta Niagara Coral Fleece - Arcoiris/Deportes",
+    "precioAhora":1990,
+    "precioAntes":"",
+    "categoria":"Accesorios",
+    "img":"https://d22fxaf9t8d39k.cloudfront.net/d050b94eefaa6b49cba75f5de0453ccc8243a9eb4fb78d4cdbc8fdfa696cb37282114.jpeg",
+    "descuento":0,
+},{
+    "id": 3,
+    "name": "Calza Dalia - Rosa Viejo",
+    "precioAhora":2290,
+    "precioAntes":"Antes $2890",
+    "categoria":"Pantalones-Calzas",
+    "img":"https://d22fxaf9t8d39k.cloudfront.net/5579c6e4ea0e412e047b6ce98c048009b82f8c4b574aae39bc540ed2c30b7a2882114.png",
+    "descuento":0,
+},{
+    "id": 4,
+    "name": "Remera Alegría - Oso Astronauta Azul M/L",
+    "precioAhora":2190,
+    "precioAntes":"",
+    "categoria":"Remeras",
+    "img":"https://d22fxaf9t8d39k.cloudfront.net/07145d312f916bddce11b4f3fb13f590381c954480740245fece44e143881c4982114.png",
+    "descuento":0,
+},{
+    "id": 5,
+    "name": "Manta Niagara Coral Fleece - Estrellas Rosa",
+    "precioAhora":1990,
+    "precioAntes":"Antes $2580",
+    "categoria":"Accesorios",
+    "img":"https://d22fxaf9t8d39k.cloudfront.net/d6590a3c33f4dc64d4b543aed8ea1cdb9472f52220846485182bda4ca093a61382114.jpeg",
+    "descuento":0,
+},{
+    "id": 6,
+    "name": "Remera Pétalos Rosa M/L",
+    "precioAhora":2490,
+    "precioAntes":"",
+    "categoria":"Remeras",
+    "img":"https://d22fxaf9t8d39k.cloudfront.net/9376404ebd2277e784204214393da8feaae33495c4dc0be4eb3c480cda44497082114.jpeg",
+    "descuento":0,
+},{
+    "id": 7,
+    "name": "Sweater Nilo - Tricolor",
+    "precioAhora":3490,
+    "precioAntes":"",
+    "categoria":"Camperas-Buzos",
+    "img":"https://d22fxaf9t8d39k.cloudfront.net/9f1c7656f5c5fa83d1d5a633408599285a45005416644d4b954b2ecb135159f582114.jpeg",
+    "descuento":0,
+},{
+    "id": 8,
+    "name": "Leggins Cassia - Simil Jean claro",
+    "precioAhora":2290,
+    "precioAntes":"",
+    "categoria":"Pantalones-Calzas",
+    "img":"https://d22fxaf9t8d39k.cloudfront.net/cb1b28487e46c95a9cb0156afd959f5c0db8b7ca7714c3377f504a811e4f583082114.jpeg",
+    "descuento":0,
+},{
+    "id": 9,
+    "name": "Bandana Flores - Fondo Rosa",
+    "precioAhora":550,
+    "precioAntes":"",
+    "categoria":"Accesorios",
+    "img":"https://d22fxaf9t8d39k.cloudfront.net/9d740e1af4ab130712c412923f5185a14c68f16682fdd8d66d1dd52f7ac622b582114.jpeg",
+    "descuento":0,
+},{
+    "id": 10,
+    "name": "Enterito Pima Rosa",
+    "precioAhora":1990,
+    "precioAntes":"",
+    "categoria":"Enteritos-Conjuntos",
+    "img":"https://d22fxaf9t8d39k.cloudfront.net/2bb2bce87d58362081ad5c5d0f7e5c120f8a7e1541e142cc5f59c0feeff8252d82114.jpeg",
+    "descuento":0,
+},{
+    "id": 11,
+    "name": "Ajuar Body 4 Piezas",
+    "precioAhora":2790,
+    "precioAntes":"",
+    "categoria":"Ajuares ",
+    "img":"https://d22fxaf9t8d39k.cloudfront.net/078d53322873fcf7980f382b0bf64ef32fdff781f2c2c935bda04c2ff90fcc4a82114.jpeg",
+    "descuento":0,
+},{
+    "id": 12,
+    "name": "Babucha Térmica Lisa",
+    "precioAhora":1690,
+    "precioAntes":"",
+    "categoria":"Pantalones-Calzas",
+    "img":"https://d22fxaf9t8d39k.cloudfront.net/df4463ebe13cf4aacf6e87b7eba43449ecc3e24b1f5b7bad5be6fead4e54461382114.jpeg",
+    "descuento":0,
+},{
+    "id": 13,
+    "name": "Jogger Friza Abejita",
+    "precioAhora":1600,
+    "precioAntes":"",
+    "categoria":"Pantalones-Calzas",
+    "img":"https://d22fxaf9t8d39k.cloudfront.net/397a865da01231949a2c02b3ee0b6d30c6553c6d8b65270d6fed7e278e0d34d082114.jpeg",
+    "descuento":0,
+},{
+    "id": 14,
+    "name": "Buzo Friza Abejita",
+    "precioAhora":1890,
+    "precioAntes":"",
+    "categoria":"Camperas-Buzos",
+    "img":"https://d22fxaf9t8d39k.cloudfront.net/f3667adaa23995ae1fb35471e9f4ddf230386f4445dc15faff157781b1ad763882114.jpeg",
+    "descuento":0,
+},{
+    "id": 15,
+    "name": "Campera Friza Camuflada",
+    "precioAhora":4200,
+    "precioAntes":"",
+    "categoria":"Camperas-Buzos",
+    "img":"https://d22fxaf9t8d39k.cloudfront.net/606f667f528d4c990275e8d1ccb137969a774b7a699b10ce71db04f9a68ca84782114.jpeg",
+    "descuento":0,
+},{
+    "id": 16,
+    "name": "Sweater Celeste Rayas",
+    "precioAhora":1490,
+    "precioAntes":"",
+    "categoria":"Camperas-Buzos",
+    "img":"https://d22fxaf9t8d39k.cloudfront.net/1360284a60fcd4c4a66618492f1e909a5176f81dda26a3a31e6b9bfe2679558982114.jpeg",
+    "descuento":0,
+},{
+    "id": 17,
+    "name": "Remera Lisa Blanca M/L",
+    "precioAhora":2290,
+    "precioAntes":"",
+    "categoria":"Remeras",
+    "img":"https://d22fxaf9t8d39k.cloudfront.net/8cb7aec82f4ea4a190e470270f6d39a199938944c8dcd54dbff8cc9b7114cea982114.jpeg",
+    "descuento":0,
+},{
+    "id": 18,
+    "name": "Remera Lisa Rosa M/L",
+    "precioAhora":1800,
+    "precioAntes":"",
+    "categoria":"Remeras",
+    "img":"https://d22fxaf9t8d39k.cloudfront.net/539c7c1f654e990bb83873106b804405e38172ba32ceb484edcd6ccccb08349582114.jpeg",
+    "descuento":0,
+},{
+    "id": 19,
+    "name": "Body Ositos M/L",
+    "precioAhora":2190,
+    "precioAntes":"",
+    "categoria":"Bodys",
+    "img":"https://d22fxaf9t8d39k.cloudfront.net/5894d701b2b1f5adbb27096fb62888a56083356e553d5398e7e81217e3a618b382114.jpeg",
+    "descuento":0,
+},{
+    "id": 20,
+    "name": "Romper Volados Rosa",
+    "precioAhora":3190,
+    "precioAntes":"",
+    "categoria":"Bodys",
+    "img":"https://d22fxaf9t8d39k.cloudfront.net/190db20087b27f9a3bdaab69fc1b84aa9764950e7beaf31101278261df6e896a82114.jpeg",
+    "descuento":0,
+},{
+    "id": 21,
+    "name": "Body Estrellas Azules M/C",
+    "precioAhora":2290,
+    "precioAntes":"",
+    "categoria":"Bodys",
+    "img":"https://d22fxaf9t8d39k.cloudfront.net/a7c0fc0eb54c76c49897b9369dddcb9ced323aeb39df062c5f72871178673a0982114.jpeg",
+    "descuento":0,
+},{
+    "id": 22,
+    "name": "Calza Rosa Pintitas",
+    "precioAhora":1690,
+    "precioAntes":"",
+    "categoria":"Pantalones-Calzas",
+    "img":"https://d22fxaf9t8d39k.cloudfront.net/2c40ba74352ae5152dbefacd9be979abee6b82760c166c849f7dca5adca6a62082114.jpeg",
+    "descuento":0,
+},{
+    "id": 23,
+    "name": "Babucha Rayas",
+    "precioAhora":1390,
+    "precioAntes":"",
+    "categoria":"Pantalones-Calzas",
+    "img":"https://d22fxaf9t8d39k.cloudfront.net/e24091b773dd0ece3ba801d6167a4916c3484db91485c752d2a0c3041c7baebb82114.jpeg",
+    "descuento":0,
+},{
+    "id": 24,
+    "name": "Remera Bosque Azul M/L",
+    "precioAhora":2290,
+    "precioAntes":"",
+    "categoria":"Remeras",
+    "img":"https://d22fxaf9t8d39k.cloudfront.net/94a2ed42df7fd133f0b336a36dbd29f8988cd7b2650d6d4d36d33e26838d6ea882114.jpeg",
+    "descuento":0,
+},{
+    "id": 25,
+    "name": "Body Aqua Flores Acuarela M/L",
+    "precioAhora":2190,
+    "precioAntes":"",
+    "categoria":"Bodys",
+    "img":"https://d22fxaf9t8d39k.cloudfront.net/a1e28741b97b13999ea2ebfc40265c2cfd80ccbc274ef406860f38fe251591e682114.jpeg",
     "descuento":0,
 }]
 console.log(productos)

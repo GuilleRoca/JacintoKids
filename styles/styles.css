@@ -391,14 +391,14 @@ header nav ul li a{
     padding-top: 2rem;
   }
 }
-.card div div{
+/* .card div div{
   display: flex;
   padding: 0px;
   max-width: 0px;
 }
 .card div div h3{
   padding-right: 8px;
-}
+} */
 .card:hover{
   transform: scale(1.2,1.2);
   z-index: 1000;
