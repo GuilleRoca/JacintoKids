@@ -33,23 +33,18 @@ function filtros (array){
         const botonesFiltros = document.createElement("div")
         botonesFiltros.className = "d-flex justify-content-between"
         botonesFiltros.innerHTML = `
-        <input type="button" class="categoriaFiltro btn btn-info" value="${categorias}">
+        <input type="button" id="filtro_${categorias} " class="categoriaFiltro btn btn-info" value="${categorias}">
         `
         contenedorFiltros.appendChild(botonesFiltros)
     })
-    return filtrosProductos
 }
+
 
 
 
 verProductos(productos)
 const categorias = filtros(productos)
-const botonFiltrado = document.querySelectorAll(".categoriaFiltro")
-console.log(botonFiltrado)
-/* botonFiltrado.onclick = () => {
-    const valorFiltro = document.querySelectorAll(".categoriaFiltro").value
-    console.log(valorFiltro)
-} */
+
 
 
 

@@ -4,6 +4,8 @@ const salirLogin = document.querySelector(".cancel_login")
 const salirCreate = document.querySelector(".cancel_create")
 const loginContainer = document.querySelector(".login")
 const createContainer = document.querySelector(".create")
+const loginForm = document.querySelector(".login_form")
+const inputEmail = document.querySelector("#input_email")
 
 botonLogin.onclick = () => {
     loginContainer.style.display = "block"
@@ -19,3 +21,5 @@ salirLogin.onclick = () => {
 salirCreate.onclick = () => {
     createContainer.style.display = "none"
 }
+
+
