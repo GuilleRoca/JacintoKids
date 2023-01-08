@@ -40,10 +40,7 @@ function filtros (array){
 }
 
 
-
-
 verProductos(productos)
-const categorias = filtros(productos)
 
 
 

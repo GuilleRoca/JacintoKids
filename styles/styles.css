@@ -37,7 +37,10 @@ ul, li{
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.login_form, .create_form{
+.headre_principal_login{
+  display: none;
+}
+#login_form, #create_form{
   width: 500px;
   padding: 50px;
   border-radius: 5px;
@@ -87,6 +90,9 @@ ul, li{
   background-size: cover;
   vertical-align: middle;
 }
+.nombre_usuario, .login_action{
+  margin-right: 15px;
+}
 .header__principal{
   display: flex;
   font-size:small;
@@ -97,6 +103,13 @@ ul, li{
 }
 .header__principal__cuenta{
   font-family: 'Josefin Sans' , sans-serif !important;
+  margin-right: 15px;
+}
+.headre_principal_login {
+  align-items: center;
+}
+.nombre_usuario_login{
+  margin-bottom: 0px;
 }
 .carousel{
   max-width: 500px;

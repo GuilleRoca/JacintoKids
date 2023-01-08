@@ -1,4 +1,3 @@
-
 function verDestacados(array){
 
     const contenedor = document.querySelector(".destacados__contenedor")
@@ -20,7 +19,6 @@ function verDestacados(array){
                 </div>
             </div>
         `
-        console.log(card)
         contenedor.appendChild(card)
     })
 }

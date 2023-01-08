@@ -199,4 +199,3 @@ const productos = [{
     "img":"https://d22fxaf9t8d39k.cloudfront.net/a1e28741b97b13999ea2ebfc40265c2cfd80ccbc274ef406860f38fe251591e682114.jpeg",
     "descuento":0,
 }]
-console.log(productos)
