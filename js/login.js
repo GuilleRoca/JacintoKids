@@ -52,7 +52,7 @@ const validarUsuarioLogin = (clave)=>{
         const nombre = document.createElement("p")
         nombre.className = "nombre_usuario_login"
         nombre.innerHTML=`
-            ${nombreEnLs} al mando
+            ${nombreEnLs} de compras <img src="./img/client.png" alt="cliente" class="alto_1r">
         `
         nombreUsuarioLs.appendChild(nombre)
     }
@@ -79,7 +79,7 @@ loginForm.onsubmit = (event) =>{
     }
     else{
         swal({
-            text: "E-mail o Contraseñas incorrectos",
+            text: "E-mail o Contraseña incorrectos",
             icon: "error",
         })
     }
@@ -87,3 +87,5 @@ loginForm.onsubmit = (event) =>{
 }
 
 validarUsuarioLogin(traerDelLs("login"))
+
+

@@ -25,4 +25,5 @@ function verDestacados(array){
 
 
 
+
 verDestacados(productos)
