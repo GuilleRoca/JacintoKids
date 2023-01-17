@@ -67,8 +67,8 @@ function insertHeader (){
                         <li class="nav-item">
                             <a id="navJuguetes" class="nav-link" href="./juguetes.html">JUGUETES</a>
                         </li>
-                        <li id="navPagos" class="nav-item">
-                            <a class="nav-link" href="./mpagos.html">PAGOS</a>
+                        <li class="nav-item">
+                            <a id="navPagos" class="nav-link" href="./mpagos.html">PAGOS</a>
                         </li>
                         <li class="nav-item">
                             <a id="navUbicacion" class="nav-link" href="./ubicacion.html">UBICACIÓN</a>
@@ -139,7 +139,8 @@ function insertFooter (){
             </div>
         </a>
         <div>
-            <p class="designer">WEB Designer   <img src="../img/logogr.JPG" alt="Logo GR" class="icono-redes">   Guillermo Rocatti</p>
+            <p class="designer">WEB Designer   <img src="../img/logogr.JPG" alt="Logo GR" class="icono-redes">   Guillermo Rocatti      <a href="https://github.com/GuilleRoca"><img src="../img/github.png" alt="github" class="icono-redes"></a> <a href="https://www.linkedin.com/in/guillermo-angel-rocatti/"><img src="../img/linkedin.png" alt="linkedin" class="icono-redes"></a></p>
+        </div>
     `
     containerFooter.appendChild(footerPaginas)
 }
@@ -165,7 +166,7 @@ switch (true){
         navAccesorios.classList.add("active");    
         navAccesorios.classList.add("active_menu");
         break;
-    case paginaActiva.innerText.includes("Jueguetes"):
+    case paginaActiva.innerText.includes("Juguetes"):
         navJuguetes.classList.add("btn");    
         navJuguetes.classList.add("active");    
         navJuguetes.classList.add("active_menu");
@@ -184,10 +185,30 @@ switch (true){
         navContacto.classList.add("btn");    
         navContacto.classList.add("active");    
         navContacto.classList.add("active_menu");
+        const emailForm = document.querySelector("#email_form");
+        const nombreForm = document.querySelector("#nombre_form");
+        const apellidoForm = document.querySelector("#apellido_form");
+        if (JSON.parse(localStorage.getItem("login"))){
+            emailForm.value=JSON.parse(localStorage.getItem("usuario"))
+            nombreForm.value=JSON.parse(localStorage.getItem("nombre"))
+            apellidoForm.value=JSON.parse(localStorage.getItem("apellido"))
+        };
+        break;
+    case paginaActiva.innerText.includes("Arrepentimiento"):
+        const emailFormArrep = document.querySelector("#email_form");
+        const nombreFormArrep = document.querySelector("#nombre_form");
+        const apellidoFormArrep = document.querySelector("#apellido_form");
+        if (JSON.parse(localStorage.getItem("login"))){
+            emailFormArrep.value=JSON.parse(localStorage.getItem("usuario"))
+            nombreFormArrep.value=JSON.parse(localStorage.getItem("nombre"))
+            apellidoFormArrep.value=JSON.parse(localStorage.getItem("apellido"))
+        };
         break;
     default:
         break; 
 }
+
+
 
 
 

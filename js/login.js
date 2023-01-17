@@ -100,7 +100,7 @@ cerrarSesion.onclick = () => {
     localStorage.removeItem("login")
     localStorage.removeItem("nombre")
     localStorage.removeItem("usuario")
-    location. reload()
+    location.reload()
 }
 
 const subirAlLs = (clave , valor) =>{
@@ -136,12 +136,11 @@ loginForm.onsubmit = (event) =>{
     event.preventDefault()
     
     if (usuarios.find((a)=> a.email === inputEmail.value) && usuarios.find((a)=> a.pass === inputPass.value)) {
-        console.log(inputEmail.value)
-        console.log(inputPass.value)
         const usuarioLogin = usuarios.filter((a)=> a.email == inputEmail.value)
         subirAlLs("login", true)
         subirAlLs("usuario", inputEmail.value)
         subirAlLs("nombre",usuarioLogin[0].nombre)
+        subirAlLs("apellido",usuarioLogin[0].apellido)
         swal({
             text: `Bienvenido ${usuarioLogin[0].nombre} `,
             icon: "success",
@@ -150,6 +149,7 @@ loginForm.onsubmit = (event) =>{
         lsLogin.style.display = "flex"
         cabeceraLogin.style.display = "none"
         validarUsuarioLogin(traerDelLs("login"))
+        location.reload()
     }
     else{
         swal({
@@ -158,8 +158,8 @@ loginForm.onsubmit = (event) =>{
         })
     }
     loginForm.reset()
+    
 }
 
 validarUsuarioLogin(traerDelLs("login"))
-
 

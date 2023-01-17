@@ -24,15 +24,6 @@ function verDestacados(array){
 }
 verDestacados(productos)
 
-
-
-/* const paginaInicio = document.querySelector("#navInicio")
-const paginaIndumentaria = document.querySelector("#navIndumentaria")
-const paginaAccesorios = document.querySelector("#navAccesorios")
-const paginaJuguetes = document.querySelector("#navJuguetes")
-const paginaPagos = document.querySelector("#navPagos")
-const paginaUbicacion = document.querySelector("#navUbicacion")
-const paginaContacto = document.querySelector("#navContacto") */
  
 function insertHeader (){
     const containerHeader = document.querySelector("#header")
@@ -107,8 +98,8 @@ function insertHeader (){
                                     <li class="nav-item">
                                         <a id="navPagos" class="nav-link" href="./layout/mpagos.html">PAGOS</a>
                                     </li>
-                                    <li" class="nav-item">
-                                        <a id="navUbicacion class="nav-link" href="./layout/ubicacion.html">UBICACIÓN</a>
+                                    <li class="nav-item">
+                                        <a id="navUbicacion" class="nav-link" href="./layout/ubicacion.html">UBICACIÓN</a>
                                     </li>
                                     <li class="nav-item">
                                         <a id="navContacto" class="nav-link" href="./layout/contacto.html">CONTACTO</a>
@@ -179,7 +170,7 @@ function insertFooter (){
             </div>
         </a>
         <div>
-            <p class="designer">WEB Designer   <img src="./img/logogr.JPG" alt="Logo GR" class="icono-redes">   Guillermo Rocatti</p>
+        <p class="designer">WEB Designer   <img src="../img/logogr.JPG" alt="Logo GR" class="icono-redes">   Guillermo Rocatti      <a href="https://github.com/GuilleRoca"><img src="./img/github.png" alt="github" class="icono-redes"></a> <a href="https://www.linkedin.com/in/guillermo-angel-rocatti/"><img src="./img/linkedin.png" alt="linkedin" class="icono-redes"></a></p>
         </div>
     `
     containerFooter.appendChild(footerPaginas)
