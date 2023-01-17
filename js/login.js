@@ -163,3 +163,23 @@ loginForm.onsubmit = (event) =>{
 
 validarUsuarioLogin(traerDelLs("login"))
 
+const bmo = document.querySelector("#modo_oscuro")
+
+
+if (traerDelLs("modoOscuro") == null){
+    subirAlLs("modoOscuro", false )
+    bmo.checked = false
+}else if(traerDelLs("modoOscuro") == false){
+    bmo.checked = false
+}else {
+    bmo.checked = true
+    
+}
+bmo.onclick = () =>{
+    if (traerDelLs("modoOscuro") == false){
+        subirAlLs("modoOscuro", true )
+    }else{
+        subirAlLs("modoOscuro", false )
+    }
+}
+

@@ -52,6 +52,10 @@ function insertHeader (){
                     </div>
                 </div>
             </div>
+            <div class="form-check form-switch align-self-end">
+                <input class="form-check-input" type="checkbox" role="switch" id="modo_oscuro">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Modo oscuro</label>
+            </div>
             <div>
                 <a href="./layout/carrito.html"><span class="material-symbols-outlined text-black">shopping_cart</span></a>
             </div>
@@ -178,3 +182,5 @@ function insertFooter (){
 
 insertFooter()
 insertHeader()
+
+
