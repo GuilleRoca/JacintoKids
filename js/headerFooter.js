@@ -152,7 +152,108 @@ function insertFooter (){
 insertHeader()
 insertFooter()
 
+/* modo oscuro y nav */
+
 const paginaActiva = document.querySelector("title")
+
+const subirAlLsHF = (clave , valor) =>{
+    localStorage.setItem( clave , JSON.stringify(valor))
+}
+
+const traerDelLsHF = (clave) =>{
+    return JSON.parse(localStorage.getItem(clave))
+}
+
+const bmo = document.querySelector("#modo_oscuro")
+const bodyOscuro = document.querySelector("body")
+const footerPrincipalOscuro = document.querySelector("footer")
+const footerOscuro = document.querySelector(".footer")
+const headerOscuro = document.querySelector(".header__principal")
+
+if (traerDelLsHF("modoOscuro") == null){
+    subirAlLsHF("modoOscuro", false )
+}else if(traerDelLsHF("modoOscuro") == false){
+    bmo.checked = false
+}else {
+    if (paginaActiva.innerText.includes("Productos") || paginaActiva.innerText.includes("Accesorios") || paginaActiva.innerText.includes("Juguetes")){
+        const fondoOscuro = document.querySelector(".destacados")
+        fondoOscuro.style.background = `url("../img/fondoOscuro.jpg")`  
+        fondoOscuro.style.backgroundSize = "contain"
+    }else if(paginaActiva.innerText.includes("Pagos")){
+        const pagosOscuro = document.querySelector(".mpagos")
+        pagosOscuro.style.backgroundColor = "rgb(9,9,9)"
+        bodyOscuro.style.color = "white"
+    }else if(paginaActiva.innerText.includes("Ubicacion")){
+        bodyOscuro.style.color = "white"
+    }else if(paginaActiva.innerText.includes("Contacto")){
+        const contactoOscuro = document.querySelector(".main_contacto_form")
+        const tituloContactoOscuro = document.querySelector(".titulo_contacto")
+        contactoOscuro.style.color = "white"
+        tituloContactoOscuro.style.color = "white"
+    }else if(paginaActiva.innerText.includes("Condiciones") || paginaActiva.innerText.includes("Cambios") || paginaActiva.innerText.includes("Arrepentimiento")){
+        bodyOscuro.style.color = "white"
+    }
+    bmo.checked = true
+    bodyOscuro.style.backgroundColor = "rgb(9,9,9)"
+    footerOscuro.style.backgroundColor = "rgb(137,109,109)"
+    headerOscuro.style.backgroundColor = "rgb(137,109,109)"
+    footerPrincipalOscuro.style.backgroundColor = "rgb(137,109,109)"
+    footerOscuro.style.color = "white"
+}
+bmo.onclick = () =>{
+    if (traerDelLsHF("modoOscuro") == false){
+        if (paginaActiva.innerText.includes("Productos") || paginaActiva.innerText.includes("Accesorios") || paginaActiva.innerText.includes("Juguetes")){
+            const fondoOscuro = document.querySelector(".destacados")
+            fondoOscuro.style.background = `url("../img/fondoOscuro.jpg")`
+            fondoOscuro.style.backgroundSize = "contain"
+        }else if(paginaActiva.innerText.includes("Pagos")){
+            const pagosOscuro = document.querySelector(".mpagos")
+            pagosOscuro.style.backgroundColor = "rgb(9,9,9)"
+            bodyOscuro.style.Color = "white"
+        }else if(paginaActiva.innerText.includes("Ubicacion")){
+            bodyOscuro.style.color = "white"
+        }else if(paginaActiva.innerText.includes("Contacto")){
+            const contactoOscuro = document.querySelector(".main_contacto_form")
+            const tituloContactoOscuro = document.querySelector(".titulo_contacto")
+            tituloContactoOscuro.style.color = "white"
+            contactoOscuro.style.color = "white"
+        }else if(paginaActiva.innerText.includes("Condiciones") || paginaActiva.innerText.includes("Cambios")){
+            bodyOscuro.style.color = "white"
+        }
+        subirAlLsHF("modoOscuro", true )
+        bodyOscuro.style.backgroundColor = "rgb(9,9,9)"
+        footerOscuro.style.backgroundColor = "rgb(137,109,109)"
+        headerOscuro.style.backgroundColor = "rgb(137,109,109)"
+        footerPrincipalOscuro.style.backgroundColor = "rgb(137,109,109)"
+        footerOscuro.style.color = "white"
+    }else{
+        if (paginaActiva.innerText.includes("Productos") || paginaActiva.innerText.includes("Accesorios") || paginaActiva.innerText.includes("Juguetes")){
+            const fondoOscuro = document.querySelector(".destacados")
+            fondoOscuro.style.background = `url("../img/fondo-lunares.jpg")`
+            fondoOscuro.style.backgroundSize = "contain"
+        }else if(paginaActiva.innerText.includes("Pagos")){
+            const pagosOscuro = document.querySelector(".mpagos")
+            pagosOscuro.style.backgroundColor = "white"
+            bodyOscuro.style.Color = "rgb(9,9,9)"
+        }else if(paginaActiva.innerText.includes("Ubicacion")){
+            bodyOscuro.style.color = "rgb(9,9,9)"
+        }else if(paginaActiva.innerText.includes("Contacto")){
+            const contactoOscuro = document.querySelector(".main_contacto_form")
+            const tituloContactoOscuro = document.querySelector(".titulo_contacto")
+            contactoOscuro.style.color = "rgb(9,9,9)"
+            tituloContactoOscuro.style.color = "rgb(9,9,9)"
+        }else if(paginaActiva.innerText.includes("Condiciones") || paginaActiva.innerText.includes("Cambios")){
+            bodyOscuro.style.color = "rgb(9,9,9)"
+        }
+        subirAlLsHF("modoOscuro", false )
+        bodyOscuro.style.backgroundColor = "white"
+        footerOscuro.style.backgroundColor = "beige"
+        footerPrincipalOscuro.style.backgroundColor = "beige"
+        footerOscuro.style.color = "black"
+        headerOscuro.style.backgroundColor = "beige"
+    }
+}
+
 
 switch (true){
     case paginaActiva.innerText.includes("Inicio"):

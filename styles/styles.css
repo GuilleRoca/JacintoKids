@@ -101,8 +101,8 @@ ul, li{
   background-image: url("../img/wave-1.svg");
   height: 500px;
   width: auto;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
   vertical-align: middle;
 }
 .nombre_usuario, .login_action{
@@ -311,11 +311,11 @@ header nav ul li a{
   list-style: none;
 }
 .destacados{
-  background: url(../img/fondo-lunares.jpg) 0 0 repeat;
+  background: url(../img/fondo-lunares.jpg);
   background-size: contain;
 }
 .destacados_cards{
-  margin-top: 0px;
+  margin-top: 0px; 
   padding-top: 0px;
   margin-left: 6rem;
   margin-right: 6rem;

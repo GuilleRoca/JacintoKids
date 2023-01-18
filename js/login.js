@@ -1,3 +1,5 @@
+/* formulario de login-create */
+
 function insaertLogin (){
     const container_LoginCreate= document.querySelector("#loginCreate")
     const divLoginCreate = document.createElement("div")
@@ -64,6 +66,8 @@ function insaertLogin (){
 }
 insaertLogin()
 
+/* DOM */
+
 const botonLogin = document.querySelector(".login_action")
 const botonCrear = document.querySelector(".create_action")
 const salirLogin = document.querySelector(".cancel_login")
@@ -99,6 +103,7 @@ cerrarSesion.onclick = () => {
     cabeceraLogin.style.display = "block"
     localStorage.removeItem("login")
     localStorage.removeItem("nombre")
+    localStorage.removeItem("apellido")
     localStorage.removeItem("usuario")
     location.reload()
 }
@@ -110,6 +115,8 @@ const subirAlLs = (clave , valor) =>{
 const traerDelLs = (clave) =>{
     return JSON.parse(localStorage.getItem(clave))
 }
+
+/* verificar si está logueado */
 
 const validarUsuarioLogin = (clave)=>{
     if(clave == true){
@@ -131,6 +138,8 @@ const validarUsuarioLogin = (clave)=>{
         nombreUsuarioLs.appendChild(nombre)
     }
 }
+
+/* login */
 
 loginForm.onsubmit = (event) =>{
     event.preventDefault()
@@ -162,24 +171,3 @@ loginForm.onsubmit = (event) =>{
 }
 
 validarUsuarioLogin(traerDelLs("login"))
-
-const bmo = document.querySelector("#modo_oscuro")
-
-
-if (traerDelLs("modoOscuro") == null){
-    subirAlLs("modoOscuro", false )
-    bmo.checked = false
-}else if(traerDelLs("modoOscuro") == false){
-    bmo.checked = false
-}else {
-    bmo.checked = true
-    
-}
-bmo.onclick = () =>{
-    if (traerDelLs("modoOscuro") == false){
-        subirAlLs("modoOscuro", true )
-    }else{
-        subirAlLs("modoOscuro", false )
-    }
-}
-

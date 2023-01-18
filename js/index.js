@@ -1,3 +1,5 @@
+/* Productos destacados */
+
 function verDestacados(array){
 
     const contenedor = document.querySelector(".destacados__contenedor")
@@ -24,6 +26,7 @@ function verDestacados(array){
 }
 verDestacados(productos)
 
+/* Header index */
  
 function insertHeader (){
     const containerHeader = document.querySelector("#header")
@@ -52,7 +55,7 @@ function insertHeader (){
                     </div>
                 </div>
             </div>
-            <div class="form-check form-switch align-self-end">
+            <div class="form-check form-switch">
                 <input class="form-check-input" type="checkbox" role="switch" id="modo_oscuro">
                 <label class="form-check-label" for="flexSwitchCheckDefault">Modo oscuro</label>
             </div>
@@ -127,6 +130,8 @@ function insertHeader (){
     containerHeader.appendChild(headerIndex)
 }
 
+/* Footer index */
+
 function insertFooter (){
     const containerFooter = document.querySelector(".footerPage")
     const footerPaginas = document.createElement("div")
@@ -182,5 +187,71 @@ function insertFooter (){
 
 insertFooter()
 insertHeader()
+
+/* modo oscuro index */
+
+const subirAlLsIn = (clave , valor) =>{
+    localStorage.setItem( clave , JSON.stringify(valor))
+}
+
+const traerDelLsIn = (clave) =>{
+    return JSON.parse(localStorage.getItem(clave))
+}
+
+const bmo = document.querySelector("#modo_oscuro")
+const fondoOscuro = document.querySelector(".destacados")
+const bodyOscuro = document.querySelector("body")
+const waveOscuro = document.querySelector(".header_waves")
+const letrasOscuro = document.querySelector(".row")
+const footerPrincipalOscuro = document.querySelector("footer")
+const footerOscuro = document.querySelector(".footer")
+const headerOscuro = document.querySelector(".header__principal")
+const grisinoOscuro = document.querySelector(".grisino")
+
+
+if (traerDelLsIn("modoOscuro") == null){
+    subirAlLsIn("modoOscuro", false )
+}else if(traerDelLsIn("modoOscuro") == false){
+    bmo.checked = false
+}else {
+    bmo.checked = true
+    fondoOscuro.style.background = `url("./img/fondoOscuro.jpg")`  
+    fondoOscuro.style.backgroundSize = "contain"
+    bodyOscuro.style.backgroundColor = "rgb(9,9,9)"
+    waveOscuro.style.background = `url("./img/wave-black.svg")`
+    letrasOscuro.style.color = "white"
+    footerOscuro.style.backgroundColor = "rgb(137,109,109)"
+    headerOscuro.style.backgroundColor = "rgb(137,109,109)"
+    footerPrincipalOscuro.style.backgroundColor = "rgb(137,109,109)"
+    footerOscuro.style.color = "white"
+    grisinoOscuro.style.color = "white"
+}
+bmo.onclick = () =>{
+    if (traerDelLsIn("modoOscuro") == false){
+        subirAlLsIn("modoOscuro", true )
+        fondoOscuro.style.background = `url("./img/fondoOscuro.jpg")`
+        fondoOscuro.style.backgroundSize = "contain"
+        bodyOscuro.style.backgroundColor = "rgb(9,9,9)"
+        waveOscuro.style.background = `url("./img/wave-black.svg")`
+        letrasOscuro.style.color = "white"
+        footerOscuro.style.backgroundColor = "rgb(137,109,109)"
+        headerOscuro.style.backgroundColor = "rgb(137,109,109)"
+        footerPrincipalOscuro.style.backgroundColor = "rgb(137,109,109)"
+        footerOscuro.style.color = "white"
+        grisinoOscuro.style.color = "white"
+    }else{
+        subirAlLsIn("modoOscuro", false )
+        fondoOscuro.style.background = `url("./img/fondo-lunares.jpg")`
+        fondoOscuro.style.backgroundSize = "contain"
+        bodyOscuro.style.backgroundColor = "white"
+        waveOscuro.style.background = `url("./img/wave-1.svg")`
+        letrasOscuro.style.color = "black"
+        footerOscuro.style.backgroundColor = "beige"
+        footerPrincipalOscuro.style.backgroundColor = "beige"
+        footerOscuro.style.color = "black"
+        headerOscuro.style.backgroundColor = "beige"
+        grisinoOscuro.style.color = "black"
+    }
+}
 
 
