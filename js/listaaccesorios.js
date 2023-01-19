@@ -11,7 +11,7 @@ function verAccesorios(array){
                 precioAntes = `Antes $${productos.precioAntes}`
                 descuentoDetalle = `
                 <div class="descuento">
-                    <p>${parseInt(((productos.precioAntes - productos.precioAhora)/productos.precioAhora)*100)}%<p>
+                    <p>${parseInt(((productos.precioAntes - productos.precioAhora)/productos.precioAntes)*100)}%<p>
                     <p>off<p>
                 </div>
                 `

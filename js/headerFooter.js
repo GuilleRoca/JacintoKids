@@ -190,7 +190,7 @@ if (traerDelLsHF("modoOscuro") == null){
         const tituloContactoOscuro = document.querySelector(".titulo_contacto")
         contactoOscuro.style.color = "white"
         tituloContactoOscuro.style.color = "white"
-    }else if(paginaActiva.innerText.includes("Condiciones") || paginaActiva.innerText.includes("Cambios") || paginaActiva.innerText.includes("Arrepentimiento")){
+    }else if(paginaActiva.innerText.includes("Condiciones") || paginaActiva.innerText.includes("Cambios") || paginaActiva.innerText.includes("Arrepentimiento") || paginaActiva.innerText.includes("Carrito")){
         bodyOscuro.style.color = "white"
     }
     bmo.checked = true
@@ -217,7 +217,7 @@ bmo.onclick = () =>{
             const tituloContactoOscuro = document.querySelector(".titulo_contacto")
             tituloContactoOscuro.style.color = "white"
             contactoOscuro.style.color = "white"
-        }else if(paginaActiva.innerText.includes("Condiciones") || paginaActiva.innerText.includes("Cambios")){
+        }else if(paginaActiva.innerText.includes("Condiciones") || paginaActiva.innerText.includes("Cambios") || paginaActiva.innerText.includes("Arrepentimiento") || paginaActiva.innerText.includes("Carrito")){
             bodyOscuro.style.color = "white"
         }
         subirAlLsHF("modoOscuro", true )
@@ -242,7 +242,7 @@ bmo.onclick = () =>{
             const tituloContactoOscuro = document.querySelector(".titulo_contacto")
             contactoOscuro.style.color = "rgb(9,9,9)"
             tituloContactoOscuro.style.color = "rgb(9,9,9)"
-        }else if(paginaActiva.innerText.includes("Condiciones") || paginaActiva.innerText.includes("Cambios")){
+        }else if(paginaActiva.innerText.includes("Condiciones") || paginaActiva.innerText.includes("Cambios") || paginaActiva.innerText.includes("Arrepentimiento") || paginaActiva.innerText.includes("Carrito")){
             bodyOscuro.style.color = "rgb(9,9,9)"
         }
         subirAlLsHF("modoOscuro", false )
@@ -254,6 +254,7 @@ bmo.onclick = () =>{
     }
 }
 
+/* destacar pagina activa */
 
 switch (true){
     case paginaActiva.innerText.includes("Inicio"):
@@ -307,6 +308,16 @@ switch (true){
             emailFormArrep.value=JSON.parse(localStorage.getItem("usuario"))
             nombreFormArrep.value=JSON.parse(localStorage.getItem("nombre"))
             apellidoFormArrep.value=JSON.parse(localStorage.getItem("apellido"))
+        };
+        break;
+    case paginaActiva.innerText.includes("Carrito"):
+        const emailFormCarrito = document.querySelector("#email_form");
+        const nombreFormCarrito = document.querySelector("#nombre_form");
+        const apellidoFormCarrito = document.querySelector("#apellido_form");
+        if (JSON.parse(localStorage.getItem("login"))){
+            emailFormCarrito.value=JSON.parse(localStorage.getItem("usuario"))
+            nombreFormCarrito.value=JSON.parse(localStorage.getItem("nombre"))
+            apellidoFormCarrito.value=JSON.parse(localStorage.getItem("apellido"))
         };
         break;
     default:

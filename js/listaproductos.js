@@ -12,7 +12,7 @@ function verProductos(array){
                 precioAntes = `Antes $${productos.precioAntes}`
                 descuentoDetalle = `
                 <div class="descuento">
-                    <p>${parseInt(((productos.precioAntes - productos.precioAhora)/productos.precioAhora)*100)}%<p>
+                    <p>${parseInt(((productos.precioAntes - productos.precioAhora)/productos.precioAntes)*100)}%<p>
                     <p>off<p>
                 </div>
                 `
@@ -29,12 +29,11 @@ function verProductos(array){
                             <div>
                                 <h6 class="text-decoration-line-through">${precioAntes}</h6>
                             </div>
-                            
                         </div>
                         <div class="d-flex justify-content-between">
                         <a href="./layout/reparacion.html" class="btn btn-primary">Comprar</a>
                         ${descuentoDetalle} 
-                    </div>
+                        </div>
                     </div>
                 </div>
             `
@@ -76,7 +75,39 @@ containerFiltros.onclick = () =>{
     console.log(catFiltro)
 }
 
+let carrito = []
 
+const agregarACarrito = (prod) => {
+    const botonACarrito = document.querySelectorAll(".boton-carrito")
+    botonACarrito.forEach ( boton => {
+        boton.onclick = () =>{
+            const id = boton.id.slice(6)    
+            const filtroProd = prod.find((element) => {
+                return element.id === Number(id)
+            })
+            carrito.push (filtroProd)
+            localStorage.setItem("carrito", JSON.stringify(carrito))
+            Toastify({
+                text: "Articulo agregado al carrito correctamente",
+                duration: 3000,
+                newWindow: true,
+                close: true,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                stopOnFocus: true, // Prevents dismissing of toast on hover
+                style: {
+                  background: "linear-gradient(to right, #00b09b, #96c93d)",
+                },
+                onClick: function(){} // Callback after click
+              }).showToast();
+        }
+    })
+}
+
+agregarACarrito(productos)
+
+const productosElegidos = JSON.parse(localStorage.getItem("carrito"))
+carrito = productosElegidos || []
 
 
 

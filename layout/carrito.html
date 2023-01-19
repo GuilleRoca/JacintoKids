@@ -19,35 +19,31 @@
 </head>
 <body class="mx-auto">
   
-  <header id="header">
+    <header id="header">
       
-  </header>
-  <section id="loginCreate"> 
+    </header>
+    <section id="loginCreate"> 
 
-  </section>
+    </section>
 
-    <main class="main__contacto">
-        <div class="titulo_second">
-            <h2 class="mt-2">FINALIZAR COMPRA</h2>
+
+    <div class="subtitulo mb-5">
+        <div class="text-center">
+            <h4 class="mt-0 font_2r">Finalizar Compra</h4>
         </div>
-    </main>
+    </div>
 
   <section class="carrito">
+    <div class="m-5">
+                
+        <ul class="destacados__contenedor">
+
+        </ul>
+    </div>
     
     <div class="container">
         <div class="row">
-            <div class="col-md-3 col-xs-12">
-                <ul class="producto_detalle">
-                    <li class="producto_detalle_foto text-center">
-                        <img src="../img/accesorio1.jpeg" class="card-img-top rounded-4" alt="Bandana Flores - Fondo Blanco">
-                    </li>
-                    <li class="producto_detalle_descrip text-center align-middle">
-                        <p>Precio: $780</p>
-                        <p>Envío: $280</p>
-                        <p>Total: $1060</p>
-                    </li>
-                </ul>
-            </div>
+            
             <div class="col-md-9 col-xs-12">
                 <form>
                     <div class="container">
@@ -55,20 +51,20 @@
                             <div class="col-md-6 col-sm-12 px-0">
                                 <div class="mb-3 ">
                                     <label for="nombre" class="form-label">Nombre</label>
-                                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                                    <input type="text" id="nombre_form" class="form-control" id="exampleFormControlInput1">
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-12 px-0">
                                 <div class="mb-3">
                                     <label for="apellido" class="form-label">Apellido</label>
-                                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                                    <input type="text" id="apellido_form" class="form-control" id="exampleFormControlInput1">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@example.com">
+                        <input type="email" id="email_form" class="form-control" id="exampleFormControlInput1" placeholder="nombre@example.com">
                     </div>
                     <div class="container">
                         <div class="row">
@@ -117,12 +113,17 @@
                             
                         </div>
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-3 d-flex justify-content-between">
                         <a href="./compraok.html" class="btn btn-primary">Comprar</a>
+                        <button id="borrar-productos" class="btn btn-primary">Limpiar carrito
+                        </button>
                     </div>
                 </form>
             </div>
-            
+            <div class="card_total col-md-3">
+                
+                                
+            </div>        
         </div>        
     </div>
   </section>
@@ -152,7 +153,10 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     <script src="../js/usuarios.js"></script>
+    <script src="../js/productos.js"></script>
     <script src="../js/headerFooter.js"></script>
     <script src="../js/login.js"></script>
+    <script src="../js/carrito.js"></script>
+
 </body>
 </html>
