@@ -105,6 +105,7 @@ cerrarSesion.onclick = () => {
     localStorage.removeItem("nombre")
     localStorage.removeItem("apellido")
     localStorage.removeItem("usuario")
+    localStorage.removeItem("carrito")
     location.reload()
 }
 
@@ -158,7 +159,6 @@ loginForm.onsubmit = (event) =>{
         lsLogin.style.display = "flex"
         cabeceraLogin.style.display = "none"
         validarUsuarioLogin(traerDelLs("login"))
-        location.reload()
     }
     else{
         swal({
