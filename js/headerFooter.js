@@ -1,3 +1,5 @@
+/* Insertar el mismo header  en todas las páginas*/
+
 function insertHeader (){
     const containerHeader = document.querySelector("#header")
     const headerPaginas = document.createElement("div")
@@ -87,8 +89,8 @@ function insertHeader (){
     `
     containerHeader.appendChild(headerPaginas)
 }
-
-
+/* Insertar el mismo footer en todas las páginas */
+ 
 function insertFooter (){
     const containerFooter = document.querySelector(".footerPage")
     const footerPaginas = document.createElement("div")

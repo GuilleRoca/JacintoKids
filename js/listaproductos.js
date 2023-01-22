@@ -61,8 +61,7 @@ ordenOferta.onclick = () =>{
     location.reload()
 }
 
-/* Conexion a la API de MErcado Libre - Tienda de Grisino - Obtener 250 artículos  */
-    
+/* Conexion a la API de Mercado Libre - Tienda de Grisino - Obtener 50 artículos  */
 
 let comprar = []
     fetch(`https://api.mercadolibre.com/sites/MLA/search?seller_id=138745311&q=grisino`)

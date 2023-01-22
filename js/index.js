@@ -1,4 +1,4 @@
-/* Productos destacados */
+/* Productos destacados en oferta*/
 
 fetch("https://api.mercadolibre.com/sites/MLA/search?seller_id=138745311&q=grisino")
 .then(respuesta=> respuesta.json())
@@ -76,7 +76,7 @@ fetch("https://api.mercadolibre.com/sites/MLA/search?seller_id=138745311&q=grisi
 })
 .catch(()=> console.log("algo salió mal"))
 
-/* Alert secciones */
+/* Alert secciones en carga de artículos*/
 const botonAccesorios = document.querySelector("#boton-seccionAccesorios")
 const botonNavidad = document.querySelector("#boton-seccionNavidad")
 

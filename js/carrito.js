@@ -105,7 +105,7 @@ function finalTotal (array) {
 
 finalTotal()
 
-/* Validar datos */
+/* Validar datos para compra*/
 
 const formularioDePago = document.querySelector("#form_pago")
 const botonFinalizarCompra = document.querySelector(".finalizar_compra")
