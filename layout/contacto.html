@@ -36,34 +36,32 @@
 
     <section class="main_contacto_form">
         <div></div>
-        <form>
+        <form id="formulario_contacto">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-sm-12 px-0">
                         <div class="mb-3 ">
                             <label for="nombre" class="form-label">Nombre</label>
-                            <input type="text" id="nombre_form" class="form-control" id="exampleFormControlInput1">
+                            <input type="text" id="nombre_contacto" class="form-control">
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-12 px-0">
                         <div class="mb-3">
                             <label for="apellido" class="form-label">Apellido</label>
-                            <input type="text" id="apellido_form" class="form-control" id="exampleFormControlInput1">
+                            <input type="text" id="apellido_contacto" class="form-control">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" id="email_form" class="form-control" id="exampleFormControlInput1" placeholder="nombre@example.com">
+                <input type="email" id="email_contacto" class="form-control" id="exampleFormControlInput1" placeholder="nombre@example.com">
             </div>
             <div class="mb-3">
                 <label for="consulta" class="form-label">Consulta</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea id="consulta_contacto" class="form-control" rows="3"></textarea>
             </div>
-            <div class="mb-3">
-                <a href="./mensajeok.html" class="btn btn-primary">Enviar</a>
-            </div>
+            <input type="submit" id="boton_consulta" class="enviar_consulta btn btn-primary" value="Enviar">
         </form>
         <div></div>
     </section>

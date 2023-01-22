@@ -63,13 +63,7 @@ function insertHeader (){
                             <a id="navInicio" class="nav-link" href="../index.html">INICIO</a>
                         </li>
                         <li class="nav-item">
-                            <a id="navIndumentaria" class="nav-link" href="./productos.html">INDUMENTRARIA</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="navAccesorios" class="nav-link" aria-current="page" href="./accesorios.html">ACCESORIOS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="navJuguetes" class="nav-link" href="./juguetes.html">JUGUETES</a>
+                            <a id="navProductos" class="nav-link" href="./productos.html">PRODUCTOS</a>
                         </li>
                         <li class="nav-item">
                             <a id="navPagos" class="nav-link" href="./mpagos.html">PAGOS</a>
@@ -116,8 +110,6 @@ function insertFooter (){
                     <ul class="pie">
                         <li><a href="../index.html">Inicio</a></li>
                         <li><a href="./productos.html">Productos</a></li>
-                        <li><a href="./accesorios.html">Acesorios</a></li>
-                        <li><a href="./juguetes.html">Juguetes</a></li>
                         <li><a href="./mpagos.html">Medios de pago</a></li>
                         <li><a href="./ubicacion.html">Ubicación</a></li>
                         <li><a href="./contacto.html">Contacto</a></li>
@@ -175,8 +167,10 @@ if (traerDelLsHF("modoOscuro") == null){
 }else if(traerDelLsHF("modoOscuro") == false){
     bmo.checked = false
 }else {
-    if (paginaActiva.innerText.includes("Productos") || paginaActiva.innerText.includes("Accesorios") || paginaActiva.innerText.includes("Juguetes")){
+    if (paginaActiva.innerText.includes("Productos")){
         const fondoOscuro = document.querySelector(".destacados")
+        const seccionesOscuro = document.querySelector(".filtros")
+        seccionesOscuro.style.color = "white"
         fondoOscuro.style.background = `url("../img/fondoOscuro.jpg")`  
         fondoOscuro.style.backgroundSize = "contain"
     }else if(paginaActiva.innerText.includes("Pagos")){
@@ -202,10 +196,12 @@ if (traerDelLsHF("modoOscuro") == null){
 }
 bmo.onclick = () =>{
     if (traerDelLsHF("modoOscuro") == false){
-        if (paginaActiva.innerText.includes("Productos") || paginaActiva.innerText.includes("Accesorios") || paginaActiva.innerText.includes("Juguetes")){
+        if (paginaActiva.innerText.includes("Productos")){
             const fondoOscuro = document.querySelector(".destacados")
             fondoOscuro.style.background = `url("../img/fondoOscuro.jpg")`
             fondoOscuro.style.backgroundSize = "contain"
+            const seccionesOscuro = document.querySelector(".filtros")
+            seccionesOscuro.style.color = "white"
         }else if(paginaActiva.innerText.includes("Pagos")){
             const pagosOscuro = document.querySelector(".mpagos")
             pagosOscuro.style.backgroundColor = "rgb(9,9,9)"
@@ -227,10 +223,12 @@ bmo.onclick = () =>{
         footerPrincipalOscuro.style.backgroundColor = "rgb(137,109,109)"
         footerOscuro.style.color = "white"
     }else{
-        if (paginaActiva.innerText.includes("Productos") || paginaActiva.innerText.includes("Accesorios") || paginaActiva.innerText.includes("Juguetes")){
+        if (paginaActiva.innerText.includes("Productos")){
             const fondoOscuro = document.querySelector(".destacados")
             fondoOscuro.style.background = `url("../img/fondo-lunares.jpg")`
             fondoOscuro.style.backgroundSize = "contain"
+            const seccionesOscuro = document.querySelector(".filtros")
+            seccionesOscuro.style.color = "black"
         }else if(paginaActiva.innerText.includes("Pagos")){
             const pagosOscuro = document.querySelector(".mpagos")
             pagosOscuro.style.backgroundColor = "white"
@@ -263,19 +261,9 @@ switch (true){
         navInicio.classList.add("active_menu");
         break;
     case paginaActiva.innerText.includes("Productos"):
-        navIndumentaria.classList.add("btn");    
-        navIndumentaria.classList.add("active");    
-        navIndumentaria.classList.add("active_menu");
-        break;
-    case paginaActiva.innerText.includes("Accesorios"):
-        navAccesorios.classList.add("btn");    
-        navAccesorios.classList.add("active");    
-        navAccesorios.classList.add("active_menu");
-        break;
-    case paginaActiva.innerText.includes("Juguetes"):
-        navJuguetes.classList.add("btn");    
-        navJuguetes.classList.add("active");    
-        navJuguetes.classList.add("active_menu");
+        navProductos.classList.add("btn");    
+        navProductos.classList.add("active");    
+        navProductos.classList.add("active_menu");
         break;
     case paginaActiva.innerText.includes("Pagos"):
         navPagos.classList.add("btn");    
@@ -291,9 +279,9 @@ switch (true){
         navContacto.classList.add("btn");    
         navContacto.classList.add("active");    
         navContacto.classList.add("active_menu");
-        const emailForm = document.querySelector("#email_form");
-        const nombreForm = document.querySelector("#nombre_form");
-        const apellidoForm = document.querySelector("#apellido_form");
+        const emailForm = document.querySelector("#email_contacto");
+        const nombreForm = document.querySelector("#nombre_contacto");
+        const apellidoForm = document.querySelector("#apellido_contacto");
         if (JSON.parse(localStorage.getItem("login"))){
             emailForm.value=JSON.parse(localStorage.getItem("usuario"))
             nombreForm.value=JSON.parse(localStorage.getItem("nombre"))
@@ -324,6 +312,35 @@ switch (true){
         break; 
 }
 
+/* validación de formulario de contacto */
+const formContacto = document.querySelector("#formulario_contacto")
+const nombreContacto = document.querySelector("#nombre_contacto")
+const apellidoContacto = document.querySelector("#apellido_contacto")
+const emailContacto = document.querySelector("#email_contacto")
+const consutalContacto = document.querySelector("#consulta_contacto")
+
+formContacto.onsubmit = (e) =>{
+    e.preventDefault()
+    const mensaje = `Alguno de los datos ingresado son incorrectos \n Recuerde que los nombre y apellidos \ndeben tener al menos 3 letras. \nEl email debe tener si o si un "@" \n y la consulta de contener algún texto`
+    if(nombreContacto.value.length < 3 || apellidoContacto.value.length < 3 || emailContacto.value.includes("@") == false || consutalContacto.value.length < 10){
+        swal({
+            text: `${mensaje} `,
+            icon: "error",
+        });
+        nombreContacto.value.length < 3 ? nombreContacto.style.border = "2px solid red" : nombreContacto.style.border = "2px solid green"
+        apellidoContacto.value.length < 3 ? apellidoContacto.style.border = "2px solid red" : apellidoContacto.style.border = "2px solid green"
+        consutalContacto.value.length < 10 ? consutalContacto.style.border = "2px solid red" : consutalContacto.style.border = "2px solid green"
+        emailContacto.value.includes("@") == false ? emailContacto.style.border = "2px solid red" : emailContacto.style.border = "2px solid green"
+    }else {
+        swal({
+            text: `El mensaje fue enviado con éxito. \nEn breve responderemos a su consulta. `,
+            icon: "success",
+        });
+        setTimeout (()=>{
+            location.reload()
+        },3000)
+        }
+}
 
 
 

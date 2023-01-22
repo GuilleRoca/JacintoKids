@@ -1,48 +1,98 @@
 /* Productos destacados */
 
-function verDestacados(array){
-
+fetch("https://api.mercadolibre.com/sites/MLA/search?seller_id=138745311&q=grisino")
+.then(respuesta=> respuesta.json())
+.then(data => {
     const contenedor = document.querySelector(".destacados__contenedor")
-
-    array.map( (productos) => {
-        let descuentoDetalle = ""
-            let precioAntes = ""
-            if (productos.precioAntes !== ""){
-                precioAntes = `Antes $${productos.precioAntes}`
-                descuentoDetalle = `
-                <div class="descuento">
-                    <p>${parseInt(((productos.precioAntes - productos.precioAhora)/productos.precioAntes)*100)}%<p>
-                    <p>off<p>
-                </div>
-                `
-                const card = document.createElement("li")
-                card.className = "container_card"
-        card.innerHTML = `
-            <div class="card p-3 " style="width: 12rem;">
-                <img src="${productos.img} " class="card-img-top rounded-4" alt="${productos.name}">
-                <div class="card-body m-0 p-0">
-                    <h6 class="card-title pt-1">${productos.name} </h6>
-                        <div class="d-flex justify-content-between">
-                            <div>
-                                <h6>$${productos.precioAhora}</h6>
-                            </div>
-                            <div>
-                                <h6 class="text-decoration-line-through">${precioAntes}</h6>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <button id="boton-${productos.id}" class="boton-carrito btn btn-primary">A carrito
-                            </button>
-                            ${descuentoDetalle} 
-                        </div>
-                    </div>
+    const comprar = []
+    data.results.forEach((element) =>{
+        let precio = element.original_price
+        let precioAntes
+        let descuentoDetalle
+        if (precio === null){
+            precioAntes = ""
+            descuentoDetalle = ""
+        }else{  
+            precioAntes = `Antes $${precio}`
+            descuentoDetalle = `
+            <div class="descuento">
+                <p>${parseInt(((element.original_price - element.price)/element.original_price)*100)}%<p>
+                <p>off<p>
             </div>
             `
-            contenedor.appendChild(card)
-        }
+            const card = document.createElement("li")
+            card.className = "container_card"
+            card.innerHTML = `
+            <div class="card p-3 " style="width: 12rem;">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_${element.thumbnail_id}-O.webp" class="card-img-top rounded-4" alt="${element.title}">
+                <div class="card-body m-0 p-0">
+                <h6 class="card-title pt-1">${element.title} </h6>
+                <div class="d-flex justify-content-between">
+                <div><h6>$${element.price}</h6></div>
+                <div><h6 class="text-decoration-line-through">${precioAntes}</h6></div>
+                </div>
+                <div class="d-flex justify-content-between">
+                <button id="boton-${element.id}" class="boton-carrito btn btn-primary">A carrito
+                </button>
+                ${descuentoDetalle} 
+                </div>
+                
+                </div>
+                </div>
+                `
+                comprar.push(element)
+                contenedor.appendChild(card)
+            }
+            })
+            let carrito = []
+            const botonACarrito = document.querySelectorAll(".boton-carrito")
+            botonACarrito.forEach ( boton => {
+                boton.onclick = () =>{
+                    const id = boton.id.slice(6)
+                    const filtroProd = comprar.find((element) => {
+                        return element.id === id
+                    })                   
+                    carrito.push (filtroProd)
+                    localStorage.setItem("carrito", JSON.stringify(carrito))
+                    Toastify({
+                        text: "Articulo agregado al carrito correctamente",
+                        duration: 3000,
+                        newWindow: true,
+                        close: true,
+                        gravity: "top", // `top` or `bottom`
+                        position: "right", // `left`, `center` or `right`
+                        stopOnFocus: true, // Prevents dismissing of toast on hover
+                        style: {
+                            background: "linear-gradient(to right, #00b09b, #96c93d)",
+                        },
+                        onClick: function(){} // Callback after click
+                    }).showToast();
+                }
+            })
+            
+            const productosElegidos = JSON.parse(localStorage.getItem("carrito"))
+            carrito = productosElegidos || []
+            
+})
+.catch(()=> console.log("algo salió mal"))
+
+/* Alert secciones */
+const botonAccesorios = document.querySelector("#boton-seccionAccesorios")
+const botonNavidad = document.querySelector("#boton-seccionNavidad")
+
+botonAccesorios.onclick = () =>{
+    swal({
+        text: "Página fuera de servicio. Estamos cargando los articulos",
+        icon: "info",
     })
 }
-verDestacados(productos)
+botonNavidad.onclick = () =>{
+    swal({
+        text: "Página fuera de servicio. Estamos cargando los articulos",
+        icon: "info",
+    })
+}
+
 
 /* Header index */
  
@@ -112,13 +162,7 @@ function insertHeader (){
                                         <a id="navInicio" class="nav-link btn active active_menu" aria-current="page" href="./index.html">INICIO</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a id="navIndumentaria" class="nav-link" href="./layout/productos.html">INDUMENTARIA</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a id="navAccesorios" class="nav-link" href="./layout/accesorios.html">ACCESORIOS</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a id="navJuguetes" class="nav-link" href="./layout/juguetes.html">JUGUETES</a>
+                                        <a id="navProductos" class="nav-link" href="./layout/productos.html">PRODUCTOS</a>
                                     </li>
                                     <li class="nav-item">
                                         <a id="navPagos" class="nav-link" href="./layout/mpagos.html">PAGOS</a>
@@ -171,8 +215,6 @@ function insertFooter (){
                     <ul class="pie">
                         <li><a href="./index.html">Inicio</a></li>
                         <li><a href="./layout/productos.html">Productos</a></li>
-                        <li><a href="./layout/accesorios.html">Acesorios</a></li>
-                        <li><a href="./layout/juguetes.html">Juguetes</a></li>
                         <li><a href="./layout/mpagos.html">Medios de pago</a></li>
                         <li><a href="./layout/ubicacion.html">Ubicación</a></li>
                         <li><a href="./layout/contacto.html">Contacto</a></li>
@@ -203,8 +245,8 @@ function insertFooter (){
     containerFooter.appendChild(footerPaginas)
 }
 
-insertFooter()
 insertHeader()
+insertFooter()
 
 /* modo oscuro index */
 
@@ -271,7 +313,6 @@ bmo.onclick = () =>{
         grisinoOscuro.style.color = "black"
     }
 }
-
 const swiper = new Swiper('.swiper', {
     speed: 400,
     spaceBetween: 100,
@@ -282,41 +323,7 @@ const swiper = new Swiper('.swiper', {
     },
     navigation: {
         nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        prevEl: '.swiper-buttn-prev',
       },
   });
   
-
-let carrito = []
-
-const agregarACarrito = (prod) => {
-    const botonACarrito = document.querySelectorAll(".boton-carrito")
-    botonACarrito.forEach ( boton => {
-        boton.onclick = () =>{
-            const id = boton.id.slice(6)    
-            const filtroProd = prod.find((element) => {
-                return element.id === Number(id)
-            })
-            carrito.push (filtroProd)
-            localStorage.setItem("carrito", JSON.stringify(carrito))
-            Toastify({
-                text: "Articulo agregado al carrito correctamente",
-                duration: 3000,
-                newWindow: true,
-                close: true,
-                gravity: "top", // `top` or `bottom`
-                position: "right", // `left`, `center` or `right`
-                stopOnFocus: true, // Prevents dismissing of toast on hover
-                style: {
-                  background: "linear-gradient(to right, #00b09b, #96c93d)",
-                },
-                onClick: function(){} // Callback after click
-              }).showToast();
-        }
-    })
-}
-
-agregarACarrito(productos)
-
-const productosElegidos = JSON.parse(localStorage.getItem("carrito"))
-carrito = productosElegidos || []
